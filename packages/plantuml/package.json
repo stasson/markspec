@@ -1,0 +1,26 @@
+{
+  "name": "@markspec/plantuml",
+  "version": "0.0.0",
+  "description": "plantuml local",
+  "keywords": [
+    "markspec",
+    "plantuml"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "files": [
+    "plantuml.jar",
+    "COPYING.jar"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "execa": "^1.0.0",
+    "mini-svg-data-uri": "^1.0.3"
+  }
+}
