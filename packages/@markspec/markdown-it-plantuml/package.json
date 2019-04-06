@@ -1,6 +1,6 @@
 {
   "name": "@markspec/markdown-it-plantuml",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "plantuml plugin for markdown-it",
   "keywords": [
     "markspec",
@@ -18,7 +18,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@markspec/plantuml": "^0.0.0"
+    "@markspec/plantuml": "^0.0.1"
   },
   "devDependencies": {
     "markdown-it": "^8.4.2"

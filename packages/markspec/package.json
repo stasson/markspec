@@ -1,6 +1,6 @@
 {
   "name": "markspec",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "technical specification from markdown",
   "keywords": [
     "spec",
@@ -12,6 +12,5 @@
   "directories": {
     "test": "__tests__"
   },
-  "scripts": {
-  }
+  "scripts": {}
 }
