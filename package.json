@@ -1,0 +1,19 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "lerna": "^3.13.1",
+    "standard-commit": "^1.5.0"
+  },
+  "scripts": {
+    "prepare": "lerna bootstrap",
+    "test": "lerna run --stream test",
+    "build": "lerna run --stream build",
+    "watch": "lerna run --stream --parallel watch"
+  },
+  "standard-commit": {
+    "scopes": "packages",
+    "promptScope": "enforce"
+  }
+}
