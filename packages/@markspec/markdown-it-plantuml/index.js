@@ -10,7 +10,6 @@ module.exports = function Plugin(md, options) {
     if (/uml|puml|plantuml/.test(token.info)) {
       return generateChart(code)
     }
-
     return temp(tokens, idx, options, env, slf)
   }
 };
