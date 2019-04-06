@@ -1,0 +1,17 @@
+{
+  "name": "markspec",
+  "version": "0.0.0",
+  "description": "technical specification from markdown",
+  "keywords": [
+    "spec",
+    "markdown"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "directories": {
+    "test": "__tests__"
+  },
+  "scripts": {
+  }
+}
