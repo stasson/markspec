@@ -82,4 +82,4 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
-packages/markdown-it-plantuml/__tests__/rendering.html
+packages/@markspec/markdown-it-plantuml/__tests__/rendering.html

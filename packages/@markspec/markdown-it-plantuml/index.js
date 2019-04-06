@@ -1,4 +1,4 @@
-const {toUriSync} = require('@manr/plantuml')
+const {toUriSync} = require('@markspec/plantuml')
 
 module.exports = function Plugin(md, options) {
 
