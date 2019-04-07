@@ -16,5 +16,8 @@
   "dependencies": {
     "katex": "^0.10.1",
     "markdown-it-texmath": "^0.5.5"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
   }
 }
