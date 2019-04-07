@@ -13,9 +13,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "scripts": {
-    "test": "jest"
-  },
   "dependencies": {
     "@markspec/markdown-it-plantuml": "^0.1.0"
   },

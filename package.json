@@ -5,6 +5,7 @@
     "prepare": "lerna bootstrap",
     "test": "lerna run --stream test",
     "build": "lerna run --stream build",
+    "dev": "lerna run --stream --parallel dev",
     "watch": "lerna run --stream --parallel watch",
     "release":"lerna publish --conventional-commits"
   },
