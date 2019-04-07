@@ -1,7 +1,7 @@
 const plantuml = require("@markspec/markdown-it-plantuml")
 
 module.exports = {
-    name:'@markspec/plugin-plantuml',
+    name:'@markspec/vuepress-plugin-plantuml',
     chainMarkdown (config) {
       config.plugin('plantuml')
         .use(plantuml)

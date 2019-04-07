@@ -17,7 +17,7 @@ module.exports = function Plugin(md, options) {
 function generateChart(code) {
   try {
     const uri = toUriSync(code)
-    return `<p><img src="${uri}" alt="uml diagram"></p>`
+    return `<p><img src="${uri}" class="plantuml" alt="uml diagram"></p>`
   } catch ({ str, hash }) {
     return `<pre>${str}</pre>`
   }
