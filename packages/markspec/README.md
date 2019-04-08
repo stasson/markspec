@@ -13,12 +13,9 @@ npm i -D @markspec/vuepress-plugin-preset
 ```javascript
 // .vuepress/config.js
 module.exports = {
-  plugins: [
-    '@markspec/preset'
-  ]
+  plugins: ["@markspec/preset"]
 };
 ```
-
 
 ## Footnotes
 
@@ -27,8 +24,9 @@ module.exports = {
 Here is a footnote reference,[^1] and another.[^longnote]
 
 [^1]: Here is the footnote.
+[^longnote]:
 
-[^longnote]: Here's one with multiple blocks.
+  Here's one with multiple blocks.
   Subsequent paragraphs are indented to show that they
   belong to the previous footnote.
 
@@ -52,7 +50,7 @@ rm -rf .
 
 ## Uml Diagram (plantuml)
 
-```uml
+```plantuml
 A->B: request
 B-->A: ack
 ```
@@ -65,4 +63,6 @@ B-->A: ack
 
 ## Images
 
-![vue](./vue.png)
+![vue logo x200](./vue.png)
+
+
