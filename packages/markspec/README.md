@@ -2,6 +2,24 @@
 
 > Under development
 
+## Usage
+
+> vuepress@1 plugin
+
+```bash
+npm i -D @markspec/vuepress-plugin-preset
+```
+
+```javascript
+// .vuepress/config.js
+module.exports = {
+  plugins: [
+    '@markspec/preset'
+  ]
+};
+```
+
+
 ## Footnotes
 
 ### Block footnotes
