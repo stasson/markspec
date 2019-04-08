@@ -15,7 +15,8 @@
   "dependencies": {
     "@markspec/vuepress-plugin-footnote": "^0.2.0",
     "@markspec/vuepress-plugin-katex": "^0.2.0",
-    "@markspec/vuepress-plugin-plantuml": "^0.2.0"
+    "@markspec/vuepress-plugin-plantuml": "^0.2.0",
+    "@markspec/vuepress-plugin-image": "^0.2.0"
   },
   "devDependencies": {
     "jest": "^24.7.1"
