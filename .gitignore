@@ -83,3 +83,7 @@ typings/
 # DynamoDB Local files
 .dynamodb/
 packages/@markspec/markdown-it-plantuml/__tests__/rendering.html
+
+# dist
+dist
+.vuepress/dist
