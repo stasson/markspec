@@ -1,0 +1,21 @@
+{
+  "name": "@markspec/vuepress-plugin-image",
+  "version": "0.2.0",
+  "description": "vuepress image plugin",
+  "keywords": [
+    "markspec",
+    "image",
+    "vuepress"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
