@@ -7,13 +7,14 @@
     "build": "lerna run --stream build",
     "dev": "lerna run --stream --parallel dev",
     "watch": "lerna run --stream --parallel watch",
-    "release":"lerna publish --conventional-commits"
+    "release": "lerna publish --conventional-commits"
   },
   "standard-commit": {
     "scopes": "packages",
     "promptScope": "enforce"
   },
   "devDependencies": {
+    "vuepress": "^1.0.0-alpha.47",
     "jest": "^24.7.1",
     "lerna": "^3.13.1",
     "standard-commit": "^1.5.0"
