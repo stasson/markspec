@@ -1,0 +1,22 @@
+{
+  "name": "@markspec/vuepress-plugin-footnote",
+  "version": "0.1.0",
+  "description": "vuepress  footnote plugin",
+  "keywords": [
+    "markspec",
+    "footnote",
+    "vuepress"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@gerhobbelt/markdown-it-footnote": "^3.0.2-3"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1"
+  }
+}
