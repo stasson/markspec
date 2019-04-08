@@ -1,6 +1,6 @@
 {
   "name": "markspec",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "technical specification from markdown",
   "keywords": [
     "spec",
@@ -16,7 +16,7 @@
     "dev": "vuepress dev"
   },
   "dependencies": {
-    "@markspec/vuepress-plugin-preset": "^0.1.0",
+    "@markspec/vuepress-plugin-preset": "^0.2.0",
     "vuepress": "^1.0.0-alpha.47"
   }
 }
