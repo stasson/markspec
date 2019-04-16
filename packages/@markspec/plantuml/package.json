@@ -9,6 +9,7 @@
   "author": "stasson <sebastien.tasson@gmail.com>",
   "homepage": "https://github.com/stasson/markspec",
   "license": "MIT",
+  "main": "index.js",
   "files": [
     "plantuml.jar",
     "COPYING.jar"
