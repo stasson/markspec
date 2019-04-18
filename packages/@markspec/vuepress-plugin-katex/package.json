@@ -13,11 +13,23 @@
   "publishConfig": {
     "access": "public"
   },
+  "main": "index.js",
+  "files": [
+    "css",
+    "clientRootMixin.js"
+  ],
+  "scripts": {
+    "prepare": "run-s prepare:*",
+    "prepare:katex": "cp -r ./node_modules/katex/dist/fonts ./css/",
+    "prepare:textmath": "cp ./node_modules/markdown-it-texmath/css/texmath.css ./css/texmath.css"
+  },
   "dependencies": {
     "katex": "^0.10.1",
-    "markdown-it-texmath": "^0.5.5"
+    "markdown-it-texmath": "^0.5.5",
+    "npm-run-all": "^4.1.5"
   },
   "devDependencies": {
-    "jest": "^24.7.1"
+    "jest": "^24.7.1",
+    "npm-run-all": "^4.1.5"
   }
 }
