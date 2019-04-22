@@ -8,16 +8,28 @@ module.exports = function Plugin(md, options) {
     const token = tokens[idx]
     const code = token.content.trim()
     if (/uml|puml|plantuml/.test(token.info)) {
-      return generateChart(code)
+      return generateUmlChart(code)
+    }
+    if (/ditaa/.test(token.info)) {
+      return generateDitaaChart(code)
     }
     return temp(tokens, idx, options, env, slf)
   }
 };
 
-function generateChart(code) {
+function generateUmlChart(code) {
   try {
-    const uri = toUriSync(code)
-    return `<p><img src="${uri}" class="plantuml" alt="uml diagram"></p>`
+    const uri = toUriSync(`@startuml\n${code}\n@enduml`, 'svg')
+    return `<p><img src="${uri}" class="plantuml plantuml-uml" alt="uml diagram"></p>`
+  } catch ({ str, hash }) {
+    return `<pre>${str}</pre>`
+  }
+}
+
+function generateDitaaChart(code) {
+  try {
+    const uri = toUriSync(`@startditaa\n${code}\n@endditaa`, 'png')
+    return `<p><img src="${uri}" class="plantuml plantuml-ditaa" alt="ditaa diagram"></p>`
   } catch ({ str, hash }) {
     return `<pre>${str}</pre>`
   }
