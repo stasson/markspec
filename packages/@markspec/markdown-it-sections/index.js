@@ -8,11 +8,7 @@ module.exports = function headerSections(md) {
     function openSection(hlvl) {
       var t = new Token("section_open", "section", 1);
       t.block = true;
-      t.attrs = [['class', `section-h${hlvl}`]]
-        // attrs &&
-        // attrs.map(function(attr) {
-        //   return [attr[0], attr[1]];
-        // }); // copy
+      t.attrs = [['class', `markdown-section markdown-section-h${hlvl}`]]
       return t;
     }
 
@@ -63,10 +59,6 @@ module.exports = function headerSections(md) {
           closeSections(section);
         }
         tokens.push(openSection(section.header));
-        if (token.attrIndex("id") !== -1) {
-          // remove ID from token
-          token.attrs.splice(token.attrIndex("id"), 1);
-        }
         sections.push(section);
       }
 

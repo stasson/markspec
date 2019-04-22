@@ -1,3 +1,3 @@
 # `@markspec/markdown-it-plantuml`
 
-> markdown-it plugin to parse plantuml locally. requires java.
+> markdown-it plugin to add header sections 
