@@ -1,4 +1,4 @@
-const { toSvg, toSvgSync, check, checkSync, toUri, toUriSync } = require("..");
+const plantuml = require("..");
 
 const diagram = `
 @startuml
@@ -9,26 +9,12 @@ B-->A: ack
 const erroneousDiagram = `@start`;
 
 describe("plantuml", () => {
-  it("renders a diagram", async () => {
-    const syncResult = toSvgSync(diagram);
-    const result = await toSvg(diagram);
-    const syncUri = toUriSync(diagram);
-    const uri = await toUri(diagram);
-    expect(result).toMatchSnapshot();
-    expect(result).toEqual(syncResult);
+  it("renders a svg diagram", async () => {
+    const uri = plantuml.toUriSync(diagram, 'svg');
     expect(uri).toMatchSnapshot();
-    expect(uri).toEqual(syncUri);
-});
-  it("renders an erroneous diagram by default", () => {
-    const result = toSvgSync(erroneousDiagram);
-    expect(result).toMatchSnapshot();
   });
-  it("checks syntax", async () => {
-    await check(diagram);
-    checkSync(diagram);
-    expect(() => {
-      checkSync(erroneousDiagram);
-    }).toThrow();
-    await expect(check(erroneousDiagram)).rejects.toMatchSnapshot();
+  it("renders a png diagram by defult", async () => {
+    const uri = plantuml.toUriSync(diagram);
+    expect(uri).toMatchSnapshot();
   });
 });
