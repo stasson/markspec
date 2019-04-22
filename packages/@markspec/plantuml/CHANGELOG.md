@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/stasson/markspec/compare/@markspec/plantuml@0.4.0...@markspec/plantuml@0.4.1) (2019-04-22)
+
+**Note:** Version bump only for package @markspec/plantuml
+
+
+
+
+
 # [0.4.0](https://github.com/stasson/markspec/compare/@markspec/plantuml@0.3.3...@markspec/plantuml@0.4.0) (2019-04-22)
 
 

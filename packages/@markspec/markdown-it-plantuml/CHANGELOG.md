@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/stasson/markspec/compare/@markspec/markdown-it-plantuml@0.5.0...@markspec/markdown-it-plantuml@0.5.1) (2019-04-22)
+
+**Note:** Version bump only for package @markspec/markdown-it-plantuml
+
+
+
+
+
 # [0.5.0](https://github.com/stasson/markspec/compare/@markspec/markdown-it-plantuml@0.4.0...@markspec/markdown-it-plantuml@0.5.0) (2019-04-22)
 
 
