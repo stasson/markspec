@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/stasson/markspec/compare/@markspec/plantuml@0.3.3...@markspec/plantuml@0.4.0) (2019-04-22)
+
+
+### Features
+
+* **plantuml:** add support for ditaa ([58c0870](https://github.com/stasson/markspec/commit/58c0870))
+
+
+
+
+
 ## 0.3.3 (2019-04-21)
 
 

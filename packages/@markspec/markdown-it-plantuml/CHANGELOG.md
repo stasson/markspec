@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/stasson/markspec/compare/@markspec/markdown-it-plantuml@0.4.0...@markspec/markdown-it-plantuml@0.5.0) (2019-04-22)
+
+
+### Features
+
+* **markdown-it-plantuml:** add support for ditaa diagrams ([814e812](https://github.com/stasson/markspec/commit/814e812))
+
+
+
+
+
 # 0.4.0 (2019-04-21)
 
 
