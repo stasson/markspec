@@ -14,9 +14,9 @@
     "promptScope": "enforce"
   },
   "devDependencies": {
-    "vuepress": "^1.0.0-alpha.47",
     "jest": "^24.7.1",
-    "lerna": "^3.13.1",
-    "standard-commit": "^1.5.0"
+    "lerna": "^3.13.4",
+    "standard-commit": "^1.5.0",
+    "vuepress": "^1.0.0-alpha.47"
   }
 }
