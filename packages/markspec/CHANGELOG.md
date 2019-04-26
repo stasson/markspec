@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/stasson/markspec/compare/markspec@0.4.2...markspec@0.5.0) (2019-04-26)
+
+
+### Features
+
+* **markspec:** use theme @markspec/default ([10cf6ff](https://github.com/stasson/markspec/commit/10cf6ff))
+* **vuepress-theme-default:** add default theme ([8e6174f](https://github.com/stasson/markspec/commit/8e6174f))
+
+
+
+
+
 ## [0.4.2](https://github.com/stasson/markspec/compare/markspec@0.4.1...markspec@0.4.2) (2019-04-22)
 
 **Note:** Version bump only for package markspec
