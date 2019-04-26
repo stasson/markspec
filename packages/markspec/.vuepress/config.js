@@ -1,5 +1,3 @@
 module.exports = {
-  plugins: [
-    '@markspec/preset'
-  ]
+  theme: '@markspec/default'
 };
