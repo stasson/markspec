@@ -1,3 +1,6 @@
 module.exports = {
-  theme: '@markspec/default'
+  theme: '@markspec/default',
+  markdown: {
+    lineNumbers: true
+  }
 };

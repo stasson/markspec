@@ -1,6 +1,8 @@
-# `markspec`
+# Markspec
 
 > Under development
+
+[VuePress](https://prismjs.com/)
 
 ## Usage
 
@@ -10,7 +12,7 @@
 npm i -D @markspec/vuepress-plugin-preset
 ```
 
-```javascript
+```javascript {2}
 // .vuepress/config.js
 module.exports = {
   plugins: ["@markspec/preset"]
@@ -46,6 +48,9 @@ note.]
 
 
 ## Code block
+
+
+this is an inline `code` block
 
 ```typescript
 class Hello {
