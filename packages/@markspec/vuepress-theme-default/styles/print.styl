@@ -14,13 +14,21 @@
     &.markdown-section-h2
       page-break-before: always
     &.markdown-section-h3,
+      page-break-inside: avoid
     &.markdown-section-h4,
+      page-break-inside: avoid
     &.markdown-section-h5,
+      page-break-inside: avoid
     &.markdown-section-h6,
       page-break-inside: avoid
   
-  h2, h3, h4, h5, h6
-    page-break-after: avoid
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6
+      page-break-after: avoid
 
-  pre, blockquote
-    page-break-inside: avoid
+    pre, 
+    blockquote
+      page-break-inside: avoid
