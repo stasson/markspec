@@ -1,0 +1,26 @@
+@require './config'
+
+// narrow desktop / iPad
+@media print
+  .sidebar
+    display: none !important
+  .navbar
+    display: none !important
+
+  .markdown-section
+    page-break-before: auto  
+    &.markdown-section-h1
+      page-break-before: right
+    &.markdown-section-h2
+      page-break-before: always
+    &.markdown-section-h3,
+    &.markdown-section-h4,
+    &.markdown-section-h5,
+    &.markdown-section-h6,
+      page-break-inside: avoid
+  
+  h2, h3, h4, h5, h6
+    page-break-after: avoid
+
+  pre, blockquote
+    page-break-inside: avoid
