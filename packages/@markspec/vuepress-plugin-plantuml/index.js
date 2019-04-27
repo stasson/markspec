@@ -8,7 +8,5 @@ module.exports = {
       .plugin("plantuml")
       .use(plantuml)
       .before("highlight")
-  },
-
-  clientRootMixin: path.resolve(__dirname, "clientRootMixin.js")
+  }
 };
