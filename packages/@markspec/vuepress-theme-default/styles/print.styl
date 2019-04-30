@@ -3,32 +3,16 @@
 // narrow desktop / iPad
 @media print
   .sidebar
-    display: none !important
+    display: none
   .navbar
-    display: none !important
-
+    display: none
   .markdown-section
     page-break-before: auto  
     &.markdown-section-h1
       page-break-before: right
     &.markdown-section-h2
       page-break-before: always
-    &.markdown-section-h3,
-      page-break-inside: avoid
-    &.markdown-section-h4,
-      page-break-inside: avoid
-    &.markdown-section-h5,
-      page-break-inside: avoid
-    &.markdown-section-h6,
-      page-break-inside: avoid
-  
-    h2, 
-    h3, 
-    h4, 
-    h5, 
-    h6
+    h1, h2, h3, h4, h5, h6
       page-break-after: avoid
-
-    pre, 
-    blockquote
+    ol, ul, p, pre, blockquote
       page-break-inside: avoid
