@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@0.7.1...@markspec/vuepress-theme-default@1.0.0) (2019-07-09)
+
+
+### Features
+
+* **vuepress-theme-default:** align on vuepress@1 ([f95aee2](https://github.com/stasson/markspec/commit/f95aee2))
+
+
+### BREAKING CHANGES
+
+* **vuepress-theme-default:** requires vuepress@^1.0.2
+
+
+
+
+
 ## [0.7.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@0.7.0...@markspec/vuepress-theme-default@0.7.1) (2019-04-30)
 
 
