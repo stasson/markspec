@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.0.0...@markspec/vuepress-theme-default@1.0.1) (2019-07-09)
+
+
+### Bug Fixes
+
+* **vuepress-theme-default:** images are not centered ([07426ae](https://github.com/stasson/markspec/commit/07426ae))
+
+
+
+
+
 # [1.0.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@0.7.1...@markspec/vuepress-theme-default@1.0.0) (2019-07-09)
 
 
