@@ -52,6 +52,14 @@ note.]
 
 this is an inline `code` block
 
+```java
+// Property Listener recommended pattern
+interface PropertyListener<T> {
+  void onChange(int area, T value);
+  void onError(int area, Throwable error);
+}
+```
+
 ```typescript
 class Hello {
   message: world;
