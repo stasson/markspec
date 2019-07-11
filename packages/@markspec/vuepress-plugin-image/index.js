@@ -6,9 +6,7 @@ module.exports = {
       .plugin("mod-image")
       .use(markdownItPluginModImage)
       .end();
-  },
-
-  clientRootMixin: require("path").resolve(__dirname, "clientRootMixin.js")
+  }
 };
 
 function markdownItPluginModImage(md) {
