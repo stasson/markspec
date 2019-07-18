@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   name: "@markspec/vuepress-plugin-image",
 
@@ -6,7 +8,9 @@ module.exports = {
       .plugin("mod-image")
       .use(markdownItPluginModImage)
       .end();
-  }
+  },
+
+  clientRootMixin: path.resolve(__dirname, "clientRootMixin.js")
 };
 
 function markdownItPluginModImage(md) {
@@ -60,6 +64,9 @@ function modifyImage(token, env) {
       Object.keys(token.attrObj).forEach(function(k) {
         token.attrSet(k, token.attrObj[k]);
       });
+
+      // add medium-zoom class
+      token.attrSet("class", "markspec");
     }
   }
 }
