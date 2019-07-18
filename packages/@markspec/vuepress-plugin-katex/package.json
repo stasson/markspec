@@ -1,6 +1,6 @@
 {
   "name": "@markspec/vuepress-plugin-katex",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "katex plugin for markdown-it",
   "keywords": [
     "markspec",

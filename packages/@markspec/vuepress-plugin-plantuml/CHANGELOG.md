@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.5](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-plantuml@0.4.4...@markspec/vuepress-plugin-plantuml@0.4.5) (2019-07-18)
+
+**Note:** Version bump only for package @markspec/vuepress-plugin-plantuml
+
+
+
+
+
 ## [0.4.4](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-plantuml@0.4.3...@markspec/vuepress-plugin-plantuml@0.4.4) (2019-07-09)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-plantuml

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.0.2...@markspec/vuepress-theme-default@1.0.3) (2019-07-18)
+
+
+### Bug Fixes
+
+* **vuepress-theme-default:** allow page break in lists ([1737806](https://github.com/stasson/markspec/commit/1737806))
+
+
+
+
+
 ## [1.0.2](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.0.1...@markspec/vuepress-theme-default@1.0.2) (2019-07-09)
 
 **Note:** Version bump only for package @markspec/vuepress-theme-default

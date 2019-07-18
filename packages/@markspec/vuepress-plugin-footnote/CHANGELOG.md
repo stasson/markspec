@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.3](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-footnote@0.4.2...@markspec/vuepress-plugin-footnote@0.4.3) (2019-07-18)
+
+**Note:** Version bump only for package @markspec/vuepress-plugin-footnote
+
+
+
+
+
 ## [0.4.2](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-footnote@0.4.1...@markspec/vuepress-plugin-footnote@0.4.2) (2019-07-09)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-footnote

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@0.4.2...@markspec/vuepress-plugin-image@0.5.0) (2019-07-18)
+
+
+### Features
+
+* **vuepress-plugin-image:** center style is done by theme ([b9f470f](https://github.com/stasson/markspec/commit/b9f470f))
+* **vuepress-plugin-image:** enable medium-zoom ([9d29fb7](https://github.com/stasson/markspec/commit/9d29fb7))
+
+
+
+
+
 ## [0.4.2](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@0.4.1...@markspec/vuepress-plugin-image@0.4.2) (2019-07-09)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-image

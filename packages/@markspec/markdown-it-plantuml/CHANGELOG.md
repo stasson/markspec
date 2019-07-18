@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/stasson/markspec/compare/@markspec/markdown-it-plantuml@0.5.2...@markspec/markdown-it-plantuml@0.6.0) (2019-07-18)
+
+
+### Features
+
+* **markdown-it-plantuml:** enable medium-zoom ([f0cd3fa](https://github.com/stasson/markspec/commit/f0cd3fa))
+
+
+
+
+
 ## [0.5.2](https://github.com/stasson/markspec/compare/@markspec/markdown-it-plantuml@0.5.1...@markspec/markdown-it-plantuml@0.5.2) (2019-07-09)
 
 **Note:** Version bump only for package @markspec/markdown-it-plantuml
