@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@markspec/vuepress-plugin-preset": "^0.5.2",
-    "@vuepress/theme-default": "^1.0.0-alpha.47"
+    "@vuepress/theme-default": "^1.0.2"
   },
   "devDependencies": {
     "jest": "^24.8.0",

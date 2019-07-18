@@ -16,7 +16,7 @@
   "devDependencies": {
     "jest": "^24.8.0",
     "lerna": "^3.15.0",
-    "standard-commit": "^2.1.1",
+    "standard-commit": "^3.0.1",
     "vuepress": "^1.0.2"
   }
 }
