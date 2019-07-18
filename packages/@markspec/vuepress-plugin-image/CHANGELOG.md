@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@0.5.0...@markspec/vuepress-plugin-image@0.5.1) (2019-07-18)
+
+
+### Bug Fixes
+
+* **vuepress-plugin-image:** freeze img style ([cbf448b](https://github.com/stasson/markspec/commit/cbf448b))
+
+
+
+
+
 # [0.5.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@0.4.2...@markspec/vuepress-plugin-image@0.5.0) (2019-07-18)
 
 
