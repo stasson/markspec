@@ -1,7 +1,7 @@
 /* global SELECTOR, OPTIONS */
 
 import './style.css'
-import zoom from './node_modules/medium-zoom'
+import zoom from 'medium-zoom'
 
 export default {
   data: () => ({ zoom: null }),
