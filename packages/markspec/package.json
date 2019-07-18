@@ -13,7 +13,7 @@
     "test": "__tests__"
   },
   "scripts": {
-    "dev": "vuepress dev",
+    "dev": "vuepress dev --no-cache",
     "build": "vuepress build"
   },
   "dependencies": {

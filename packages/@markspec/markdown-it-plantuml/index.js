@@ -20,7 +20,7 @@ module.exports = function Plugin(md, options) {
 function generateUmlChart(code) {
   try {
     const uri = toUriSync(`@startuml\n${code}\n@enduml`, 'svg')
-    return `<p><img src="${uri}" class="plantuml plantuml-uml" alt="uml diagram"></p>`
+    return `<p><img src="${uri}" class="markspec plantuml plantuml-uml" alt="uml diagram"></p>`
   } catch ({ str, hash }) {
     return `<pre>${str}</pre>`
   }
@@ -29,7 +29,7 @@ function generateUmlChart(code) {
 function generateDitaaChart(code) {
   try {
     const uri = toUriSync(`@startditaa\n${code}\n@endditaa`, 'png')
-    return `<p><img src="${uri}" class="plantuml plantuml-ditaa" alt="ditaa diagram"></p>`
+    return `<p><img src="${uri}" class="markspec plantuml plantuml-ditaa" alt="ditaa diagram"></p>`
   } catch ({ str, hash }) {
     return `<pre>${str}</pre>`
   }
