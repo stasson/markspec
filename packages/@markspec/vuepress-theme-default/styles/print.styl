@@ -1,18 +1,31 @@
 @require './config'
 
-// narrow desktop / iPad
 @media print
+
+  a[href*='//']:after {
+      content:" (" attr(href) ") ";
+  }
+
   .sidebar
     display: none
   .navbar
     display: none
+  .page-nav
+    display: none
+
   .markdown-section
-    page-break-before: auto  
+    page-break-before: auto
     &.markdown-section-h1
-      page-break-before: right
-    &.markdown-section-h2
       page-break-before: always
-    h1, h2, h3, h4, h5, h6
-      page-break-after: avoid
-    pre, blockquote
+    &.markdown-section-h2
       page-break-inside: avoid
+    &.markdown-section-h3
+      page-break-inside: avoid
+    &.markdown-section-h4
+      page-break-inside: avoid
+
+  ol, ul
+    page-break-inside: auto
+  pre, blockquote, table
+    page-break-inside: avoid
+
