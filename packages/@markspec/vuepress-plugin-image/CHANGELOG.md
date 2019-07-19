@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@1.0.0...@markspec/vuepress-plugin-image@1.0.1) (2019-07-19)
+
+
+### Bug Fixes
+
+* **vuepress-plugin-image:** apply zoom for all images ([db92e0c](https://github.com/stasson/markspec/commit/db92e0c))
+
+
+
+
+
 ## [0.5.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-image@0.5.0...@markspec/vuepress-plugin-image@0.5.1) (2019-07-18)
 
 

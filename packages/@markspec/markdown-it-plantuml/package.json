@@ -1,6 +1,6 @@
 {
   "name": "@markspec/markdown-it-plantuml",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "plantuml plugin for markdown-it",
   "keywords": [
     "markspec",

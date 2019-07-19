@@ -1,6 +1,6 @@
 {
   "name": "@markspec/vuepress-plugin-preset",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vuepress plugin preset ",
   "keywords": [
     "markspec",
@@ -14,9 +14,9 @@
   },
   "dependencies": {
     "@markspec/vuepress-plugin-footnote": "^1.0.0",
-    "@markspec/vuepress-plugin-image": "^1.0.0",
+    "@markspec/vuepress-plugin-image": "^1.0.1",
     "@markspec/vuepress-plugin-katex": "^1.0.0",
-    "@markspec/vuepress-plugin-plantuml": "^1.0.0",
+    "@markspec/vuepress-plugin-plantuml": "^1.0.1",
     "@markspec/vuepress-plugin-sections": "^1.0.0"
   },
   "devDependencies": {
