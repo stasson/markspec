@@ -65,8 +65,10 @@ function modifyImage(token, env) {
         token.attrSet(k, token.attrObj[k]);
       });
 
-      // add medium-zoom class
-      token.attrSet("class", "markspec");
     }
+
+    // add medium-zoom class
+    token.attrSet("class", "markspec");
+
   }
 }

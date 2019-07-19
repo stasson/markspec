@@ -98,3 +98,5 @@ B-->A: ack
 ## Images
 
 ![vue logo x200](./vue.png)
+
+![vue logo](./vue.png)
