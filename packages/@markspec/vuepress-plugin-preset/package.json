@@ -13,6 +13,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@markspec/vuepress-plugin-config": "^1.0.0",
     "@markspec/vuepress-plugin-footnote": "^1.0.0",
     "@markspec/vuepress-plugin-image": "^1.0.1",
     "@markspec/vuepress-plugin-katex": "^1.0.0",
