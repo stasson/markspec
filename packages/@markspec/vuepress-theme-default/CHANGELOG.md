@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.1.2...@markspec/vuepress-theme-default@1.2.0) (2019-07-20)
+
+
+### Features
+
+* **vuepress-plugin-config:** add autoconfig ([e6c460e](https://github.com/stasson/markspec/commit/e6c460e))
+
+
+
+
+
 ## [1.1.2](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.1.1...@markspec/vuepress-theme-default@1.1.2) (2019-07-19)
 
 
