@@ -1,5 +1,5 @@
 ---
-navbar: 3
+navbar: hide
 ---
 
 # Extra Page

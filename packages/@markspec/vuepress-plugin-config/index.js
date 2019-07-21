@@ -12,29 +12,33 @@ module.exports = (_, ctx) => {
   const { package: pkg } = readPkgUp.sync({ cwd: sourceDir }) || {
     package: {}
   };
-  const config = explorer.searchSync(sourceDir) || {};
+  const { config } = explorer.searchSync(sourceDir) || { config: {} };
   const {
     base = process.env.BASE_URL || siteConfig.base,
     title = siteConfig.title || pkg.name,
     description = siteConfig.description || pkg.description,
     author = (pkg.author && pkg.author.email) || undefined,
     logo = (themeConfig && themeConfig.logo) || "/favicon.png",
+    autonav = true,
     sidebar = themeConfig.sidebar || "auto",
-    nav = themeConfig.nav || "auto",
+    nav = themeConfig.nav || [],
+    links = [],
+    repository = true,
     markdown = siteConfig.markdown || {
       lineNumbers: true
     },
-    evergreen = siteConfig.evergreen || true
+    evergreen = siteConfig.evergreen || true,
+    dbgDump
   } = config;
 
-  const repository = config.repository || findOrigin(sourceDir, pkg);
+  const repolink = repository == true ? findOrigin(sourceDir, pkg) : repository;
 
   const head = buildHead(siteConfig.head, author, description);
 
   Object.assign(themeConfig, {
     logo,
     sidebar,
-    nav,
+    nav
   });
 
   Object.assign(siteConfig, {
@@ -52,14 +56,15 @@ module.exports = (_, ctx) => {
 
     async ready() {
       const { pages } = ctx.getSiteData ? ctx.getSiteData() : ctx;
-      if (themeConfig.nav == "auto") {
-        const origin = findOrigin(sourceDir, pkg);
-        const nav = buildNav(pages, repository);
-        themeConfig.nav = nav;
+      if (autonav) {
+        themeConfig.nav = buildNav(pages, autonav == "all");
       }
-      console.log(JSON.stringify(nav, null, 2));
+      if (repolink || links.length) {
+        addLinks(themeConfig.nav, repolink, links);
+        // console.log(themeConfig.nav)
+      }
 
-
+      if (dbgDump) console.debug(JSON.stringify({ siteConfig }, null, 2));
     }
   };
 };
@@ -94,13 +99,18 @@ function findOrigin(dir, pkg) {
   );
 }
 
-function buildNav(pages, repository) {
+function buildNav(pages, all) {
   const { items: nav } = pages
-    .filter(page => page.path != "/")
+    .filter(
+      page =>
+        page.path != "/" &&
+        page.frontmatter.navbar != "hide" &&
+        (all || page.frontmatter.navbar)
+    )
     .map(page => {
       const { title, path: link, frontmatter } = page || {};
       const { navbar } = frontmatter || {};
-      const { group = link, order =  99 } =
+      const { group = link, order = 99 } =
         typeof navbar == "string"
           ? { group: navbar }
           : typeof navbar == "number"
@@ -167,11 +177,28 @@ function buildNav(pages, repository) {
       { items: [] }
     );
 
-  if (repository) {
-    const text = startCase(new URL(repository).hostname.split(".")[0]);
-    nav.push({ text, link: repository });
+  return nav;
+}
+
+function addLinks(nav, repolink, links) {
+  let items = [];
+
+  if (repolink) {
+    const text = startCase(new URL(repolink).hostname.split(".")[0]);
+    items.push({ text, link: repolink });
   }
-  // console.log(JSON.stringify(nav, null, 2));
+
+  for (link of links) {
+    items.push(link);
+  }
+
+  if (items.length == 1) {
+    nav.push(items[0]);
+  } else {
+    for (item of items) {
+      nav.push(item);
+    }
+  }
   return nav;
 }
 
