@@ -27,6 +27,7 @@ module.exports = (_, ctx) => {
     markdown = siteConfig.markdown || {
       lineNumbers: true
     },
+    lastUpdated = 'Last Updated',
     evergreen = siteConfig.evergreen || true,
     dbgDump
   } = config;
@@ -38,7 +39,8 @@ module.exports = (_, ctx) => {
   Object.assign(themeConfig, {
     logo,
     sidebar,
-    nav
+    nav,
+    lastUpdated
   });
 
   Object.assign(siteConfig, {
