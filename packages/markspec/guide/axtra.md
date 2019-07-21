@@ -1,5 +1,5 @@
 ---
-navbar: hide
+autonav: hide
 ---
 
 # Extra Page

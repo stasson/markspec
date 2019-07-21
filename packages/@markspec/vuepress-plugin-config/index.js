@@ -57,11 +57,12 @@ module.exports = (_, ctx) => {
     async ready() {
       const { pages } = ctx.getSiteData ? ctx.getSiteData() : ctx;
       if (autonav) {
-        themeConfig.nav = buildNav(pages, autonav == "all");
+        const {nav, sidebar} = buildNav(pages, autonav == "all"); 
+        themeConfig.nav = nav
+        themeConfig.sidebar = sidebar
       }
       if (repolink || links.length) {
         addLinks(themeConfig.nav, repolink, links);
-        // console.log(themeConfig.nav)
       }
 
       if (dbgDump) console.debug(JSON.stringify({ siteConfig }, null, 2));
@@ -100,22 +101,22 @@ function findOrigin(dir, pkg) {
 }
 
 function buildNav(pages, all) {
-  const { items: nav } = pages
+  const navitems = pages
     .filter(
       page =>
         page.path != "/" &&
-        page.frontmatter.navbar != "hide" &&
-        (all || page.frontmatter.navbar)
+        page.frontmatter.autonav != "hide" &&
+        (all || page.frontmatter.autonav)
     )
     .map(page => {
       const { title, path: link, frontmatter } = page || {};
-      const { navbar } = frontmatter || {};
+      const { autonav } = frontmatter || {};
       const { group = link, order = 99 } =
-        typeof navbar == "string"
-          ? { group: navbar }
-          : typeof navbar == "number"
-          ? { order: navbar }
-          : navbar == "true"
+        typeof autonav == "string"
+          ? { group: autonav }
+          : typeof autonav == "number"
+          ? { order: autonav }
+          : autonav == "true"
           ? { order: 10 }
           : {};
 
@@ -128,6 +129,7 @@ function buildNav(pages, all) {
       const text = path[level - 1] || title;
 
       return {
+        page,
         link,
         text,
         path,
@@ -143,46 +145,61 @@ function buildNav(pages, all) {
         : a.path < b.path
         ? -1
         : 1;
-    })
-    .reduce(
-      (tree, info) => {
-        let node = tree;
-        let next = tree;
-        let p;
+    });
 
-        for (p of info.path) {
-          const text = navCase(p);
-          node.items = node.items || [];
-          const index = node.items.findIndex(item => {
-            return item.text == text;
-          });
-          if (index != -1) {
-            next = node.items[index];
-          } else {
-            next = { text };
-            node.items.push(next);
-            node.items = node.items.sort((a, b) => b.path < a.path);
-          }
-          node = next;
-        }
+  const sidebar = navitems
+    .filter(item => item.page.frontmatter.sidebar != false )
+    .reduce((tree, info) => {
+    const path = `/${info.path[0]}/`
+    if (!tree[path]) {
+      tree[path] = []
+    }
+    tree[path].push(info.link)
 
-        Object.assign(node, {
-          link: info.link,
-          text: navCase(info.text),
-          order: info.order
+    return tree
+  }, {});
+
+  sidebar['/'] = ['']
+
+  const { items: nav } = navitems.reduce(
+    (tree, info) => {
+      let node = tree;
+      let next = tree;
+      let p;
+
+      for (p of info.path) {
+        const text = navCase(p);
+        node.items = node.items || [];
+        const index = node.items.findIndex(item => {
+          return item.text == text;
         });
+        if (index != -1) {
+          next = node.items[index];
+        } else {
+          next = { text };
+          node.items.push(next);
+          node.items = node.items.sort((a, b) => b.path < a.path);
+        }
+        node = next;
+      }
 
-        return tree;
-      },
-      { items: [] }
-    );
+      Object.assign(node, {
+        link: info.link,
+        text: navCase(info.text),
+        order: info.order
+      });
 
-  return nav;
+      return tree;
+    },
+    { items: [] }
+  );
+
+  return {nav, sidebar};
 }
 
 function addLinks(nav, repolink, links) {
   const node = {
-    text: links && links.text || 'Links',
+    text: (links && links.text) || "Links",
     items: []
   };
 
@@ -191,7 +208,7 @@ function addLinks(nav, repolink, links) {
     node.items.push({ text, link: repolink });
   }
 
-  for (item of Array.isArray(links) && links || links.items || []) {
+  for (item of (Array.isArray(links) && links) || links.items || []) {
     node.items.push(item);
   }
 

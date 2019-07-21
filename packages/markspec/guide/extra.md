@@ -1,5 +1,5 @@
 ---
-navbar: 2
+autonav: 2
 ---
 
 # Extra Page

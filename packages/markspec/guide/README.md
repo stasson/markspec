@@ -1,5 +1,5 @@
 ---
-navbar: 1
+autonav: 1
 ---
 
 # Guide
