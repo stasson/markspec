@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/stasson/markspec/compare/markspec@1.2.0...markspec@1.3.0) (2019-07-21)
+
+
+### Features
+
+* **vuepress-plugin-config:** build multi-sidebar when autonav ([cfd3061](https://github.com/stasson/markspec/commit/cfd3061))
+
+
+
+
+
 # [1.2.0](https://github.com/stasson/markspec/compare/markspec@1.1.0...markspec@1.2.0) (2019-07-21)
 
 
