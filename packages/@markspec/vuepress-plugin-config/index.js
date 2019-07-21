@@ -181,23 +181,24 @@ function buildNav(pages, all) {
 }
 
 function addLinks(nav, repolink, links) {
-  let items = [];
+  const node = {
+    text: links && links.text || 'Links',
+    items: []
+  };
 
   if (repolink) {
     const text = startCase(new URL(repolink).hostname.split(".")[0]);
-    items.push({ text, link: repolink });
+    node.items.push({ text, link: repolink });
   }
 
-  for (link of links) {
-    items.push(link);
+  for (item of Array.isArray(links) && links || links.items || []) {
+    node.items.push(item);
   }
 
-  if (items.length == 1) {
-    nav.push(items[0]);
+  if (node.items.length == 1) {
+    nav.push(node.items[0]);
   } else {
-    for (item of items) {
-      nav.push(item);
-    }
+    nav.push(node);
   }
   return nav;
 }
