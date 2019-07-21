@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-config@1.1.0...@markspec/vuepress-plugin-config@1.2.0) (2019-07-21)
+
+
+### Features
+
+* **vuepress-plugin-config:** autonav config is opt-in by default ([687aac5](https://github.com/stasson/markspec/commit/687aac5))
+
+
+
+
+
 # 1.1.0 (2019-07-20)
 
 
