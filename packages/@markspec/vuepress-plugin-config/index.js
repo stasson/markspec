@@ -28,7 +28,7 @@ module.exports = (_, ctx) => {
       lineNumbers: true
     },
     lastUpdated = 'Last Updated',
-    evergreen = siteConfig.evergreen || true,
+    // evergreen = siteConfig.evergreen || true,
     dbgDump
   } = config;
 
@@ -50,7 +50,7 @@ module.exports = (_, ctx) => {
     head,
     themeConfig,
     markdown,
-    evergreen
+    // evergreen
   });
 
   return {
