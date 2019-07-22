@@ -1,6 +1,6 @@
 {
   "name": "@markspec/vuepress-plugin-config",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "vuepress plugin config",
   "keywords": [
     "markspec",

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-config@1.4.0...@markspec/vuepress-plugin-config@1.4.1) (2019-07-22)
+
+**Note:** Version bump only for package @markspec/vuepress-plugin-config
+
+
+
+
+
 # [1.4.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-config@1.3.0...@markspec/vuepress-plugin-config@1.4.0) (2019-07-21)
 
 
