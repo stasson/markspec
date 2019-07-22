@@ -22,16 +22,16 @@ module.exports = (_, ctx) => {
     sidebar = themeConfig.sidebar || "auto",
     nav = themeConfig.nav || [],
     links = [],
-    repository = true,
+    repository = pkg.repository && (pkg.repository.url || pkg.repository),
     markdown = siteConfig.markdown || {
       lineNumbers: true
     },
-    lastUpdated = 'Last Updated',
+    lastUpdated = "Last Updated",
     evergreen = siteConfig.evergreen || true,
     dbgDump
   } = config;
 
-  const repolink = repository == true ? findOrigin(sourceDir, pkg) : repository;
+  const repolink = repository == "origin" ? findOrigin(sourceDir) : repository;
 
   const head = buildHead(siteConfig.head, author, description);
 
@@ -57,9 +57,9 @@ module.exports = (_, ctx) => {
     async ready() {
       const { pages } = ctx.getSiteData ? ctx.getSiteData() : ctx;
       if (autonav) {
-        const {nav, sidebar} = buildNav(pages, autonav == "all"); 
-        themeConfig.nav = nav
-        themeConfig.sidebar = sidebar
+        const { nav, sidebar } = buildNav(pages, autonav == "all");
+        themeConfig.nav = nav;
+        themeConfig.sidebar = sidebar;
       }
       if (repolink || links.length) {
         addLinks(themeConfig.nav, repolink, links);
@@ -83,7 +83,7 @@ function buildHead(head, author, description) {
   return head;
 }
 
-function findOrigin(dir, pkg) {
+function findOrigin(dir) {
   let origin = undefined;
   const remoteOrigin = require("remote-origin-url");
   const findGitRoot = require("find-git-root");
@@ -95,9 +95,7 @@ function findOrigin(dir, pkg) {
     console.error(e.message);
   }
 
-  return (
-    origin || (pkg && pkg.repository && (pkg.repository.url || pkg.repository))
-  );
+  return origin;
 }
 
 function buildNav(pages, all) {
@@ -148,18 +146,18 @@ function buildNav(pages, all) {
     });
 
   const sidebar = navitems
-    .filter(item => item.page.frontmatter.sidebar != false )
+    .filter(item => item.page.frontmatter.sidebar != false)
     .reduce((tree, info) => {
-    const path = `/${info.path[0]}/`
-    if (!tree[path]) {
-      tree[path] = []
-    }
-    tree[path].push(info.link)
+      const path = `/${info.path[0]}/`;
+      if (!tree[path]) {
+        tree[path] = [];
+      }
+      tree[path].push(info.link);
 
-    return tree
-  }, {});
+      return tree;
+    }, {});
 
-  sidebar['/'] = ['']
+  sidebar["/"] = [""];
 
   const { items: nav } = navitems.reduce(
     (tree, info) => {
@@ -194,7 +192,7 @@ function buildNav(pages, all) {
     { items: [] }
   );
 
-  return {nav, sidebar};
+  return { nav, sidebar };
 }
 
 function addLinks(nav, repolink, links) {
