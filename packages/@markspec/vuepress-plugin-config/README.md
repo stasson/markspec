@@ -18,11 +18,6 @@ vuepress autoconfig extension file
 class {
 
   /**
-   * @default process.env.BASE_URL
-   */
-  base: string
-
-  /**
    * @default package.name
    */
   title: string
@@ -52,9 +47,9 @@ class {
   links: [],
 
   /**
-   * @default true
+   * @default package.repository.url
    */
-  repository: boolean | string,
+  repository: string,
 
   /**
    * only supports evergreen browsers
