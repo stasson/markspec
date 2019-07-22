@@ -14,7 +14,6 @@ module.exports = (_, ctx) => {
   };
   const { config } = explorer.searchSync(sourceDir) || { config: {} };
   const {
-    base = process.env.BASE_URL || siteConfig.base,
     title = siteConfig.title || pkg.name,
     description = siteConfig.description || pkg.description,
     author = (pkg.author && pkg.author.email) || undefined,
@@ -28,7 +27,7 @@ module.exports = (_, ctx) => {
       lineNumbers: true
     },
     lastUpdated = 'Last Updated',
-    // evergreen = siteConfig.evergreen || true,
+    evergreen = siteConfig.evergreen || true,
     dbgDump
   } = config;
 
@@ -44,13 +43,12 @@ module.exports = (_, ctx) => {
   });
 
   Object.assign(siteConfig, {
-    base,
     title,
     description,
     head,
     themeConfig,
     markdown,
-    // evergreen
+    evergreen
   });
 
   return {
