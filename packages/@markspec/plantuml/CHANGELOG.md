@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/stasson/markspec/compare/@markspec/plantuml@1.1.0...@markspec/plantuml@1.2.0) (2019-09-17)
+
+
+### Features
+
+* **plantuml:** upgrade to plantuml-jar-mit-1.2019.10 ([c335fb4](https://github.com/stasson/markspec/commit/c335fb4))
+
+
+
+
+
 # [1.1.0](https://github.com/stasson/markspec/compare/@markspec/plantuml@1.0.0...@markspec/plantuml@1.1.0) (2019-07-20)
 
 
