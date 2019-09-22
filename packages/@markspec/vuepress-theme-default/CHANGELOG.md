@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.3.0...@markspec/vuepress-theme-default@1.3.1) (2019-09-22)
+
+
+### Bug Fixes
+
+* **vuepress-theme-default:** make page-break a global component ([1ca0ef5](https://github.com/stasson/markspec/commit/1ca0ef5))
+
+
+
+
+
 # [1.3.0](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.2.9...@markspec/vuepress-theme-default@1.3.0) (2019-09-22)
 
 
