@@ -30,18 +30,19 @@
   .page-nav
     display: none
 
-  .markdown-section
-    page-break-before: auto
-    &.markdown-section-h1
-      page-break-before: always
-    &.markdown-section-h2
-      page-break-inside: avoid
-    &.markdown-section-h3
-      page-break-inside: avoid
-    &.markdown-section-h4
-      page-break-inside: avoid
-
-  ol, ul
-    page-break-inside: auto
-  pre, blockquote, table
+  .markdown-section-h1
+    page-break-before: always
+  .markdown-section-h2 
     page-break-inside: avoid
+  .markdown-section-h3 
+    page-break-inside: avoid
+  .markdown-section-h4 
+    page-break-inside: avoid
+  .markdown-section-h5 
+    page-break-inside: avoid
+  .markdown-section
+    pre, blockquote, table
+      page-break-inside: avoid
+    ol, ul
+      page-break-inside: avoid
+    
