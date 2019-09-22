@@ -33,7 +33,7 @@ module.exports = (_, ctx) => {
 
   const repolink = repository == "origin" ? findOrigin(sourceDir) : repository;
 
-  const head = buildHead(siteConfig.head, author, description);
+  const head = buildHead(siteConfig, author, description);
 
   Object.assign(themeConfig, {
     logo,
@@ -70,10 +70,13 @@ module.exports = (_, ctx) => {
   };
 };
 
-function buildHead(head, author, description) {
-  head = head || [];
+function buildHead(siteConfig, author, description) {
+  head = siteConfig.head || [];
+  base = siteConfig.base || "/";
+  favicon = `${base}favicon.png`;
+
   // build head
-  head.unshift(["link", { rel: "icon", href: "/favicon.png" }]);
+  head.unshift(["link", { rel: "icon", href: favicon }]);
   if (author) {
     head.unshift(["meta", { rel: "author", content: author }]);
   }
