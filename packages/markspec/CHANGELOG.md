@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.7](https://github.com/stasson/markspec/compare/markspec@1.3.6...markspec@1.3.7) (2019-09-22)
+
+**Note:** Version bump only for package markspec
+
+
+
+
+
 ## [1.3.6](https://github.com/stasson/markspec/compare/markspec@1.3.5...markspec@1.3.6) (2019-09-22)
 
 **Note:** Version bump only for package markspec
