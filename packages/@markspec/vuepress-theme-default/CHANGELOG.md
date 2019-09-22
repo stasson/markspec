@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.8](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.2.7...@markspec/vuepress-theme-default@1.2.8) (2019-09-22)
+
+
+### Bug Fixes
+
+* **vuepress-theme-default:** avoid h2 section page break ([0689684](https://github.com/stasson/markspec/commit/0689684))
+
+
+
+
+
 ## [1.2.7](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.2.6...@markspec/vuepress-theme-default@1.2.7) (2019-09-22)
 
 **Note:** Version bump only for package @markspec/vuepress-theme-default
