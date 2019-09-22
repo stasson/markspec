@@ -2,6 +2,23 @@
 
 @media print
 
+  html
+    font-size 75%
+
+  body:
+    font-size 12pt
+
+  body, h1, h2, h3, h4, h5, h6
+    color #000
+
+  a
+    color: #00008B  
+  p a code 
+    color: #00008b
+
+  svg.icon.outbound
+    display: none
+
   a[href*='//']:after {
       content:" (" attr(href) ") ";
   }
@@ -28,4 +45,3 @@
     page-break-inside: auto
   pre, blockquote, table
     page-break-inside: avoid
-
