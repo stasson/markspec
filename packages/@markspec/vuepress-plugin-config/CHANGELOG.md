@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.4](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-config@1.4.3...@markspec/vuepress-plugin-config@1.4.4) (2019-09-22)
+
+
+### Bug Fixes
+
+* **vuepress-plugin-config:** favicon should be prepended with base ([febce4b](https://github.com/stasson/markspec/commit/febce4b))
+
+
+
+
+
 ## [1.4.3](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-config@1.4.2...@markspec/vuepress-plugin-config@1.4.3) (2019-09-17)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-config
