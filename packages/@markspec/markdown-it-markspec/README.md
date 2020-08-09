@@ -4,7 +4,7 @@
 
 - [x] Common Mark
 - [x] URL Auto linking
-- [ ] Meta Data (YAML Frontmatter)
+- [x] Meta Data (YAML Frontmatter)
 - [x] Emoji
 - [x] KaTeX Formula
 - [x] Mermaid Diagrams
