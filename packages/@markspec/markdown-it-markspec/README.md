@@ -1,8 +1,6 @@
-# markspec
+# `@markspec/markdown-it-markspec`
 
-> technical specification from markdown
-
-## Feature Set
+> markdown-it plugin pack
 
 - [ ] Common Mark
 - [ ] URL Auto linking
@@ -14,3 +12,4 @@
 - [ ] Footnotes
 - [ ] Embedded Images
 - [ ] alert containers: `info`, `tip`, `warning`, `danger`
+

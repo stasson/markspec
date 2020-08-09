@@ -1,0 +1,351 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`markdown-it-markspec renders markspec 1`] = `
+"<hr />
+<h2>title: Markdown Cheatsheet
+version: 1.0</h2>
+<h1>Markdown Cheatsheet</h1>
+<!-- TOC -->
+<ul>
+<li><a href=\\"#vs-code-config\\">VS Code Config</a></li>
+<li><a href=\\"#markdownlint\\">Markdownlint</a></li>
+<li><a href=\\"#front-matter\\">Front Matter</a></li>
+<li><a href=\\"#heading\\">Heading</a></li>
+<li><a href=\\"#horizontal-rule\\">Horizontal rule</a></li>
+<li><a href=\\"#styling\\">Styling</a></li>
+<li><a href=\\"#blockquote\\">Blockquote</a></li>
+<li><a href=\\"#lists\\">Lists</a></li>
+<li><a href=\\"#links\\">Links</a></li>
+<li><a href=\\"#code\\">Code</a></li>
+<li><a href=\\"#tables\\">Tables</a></li>
+<li><a href=\\"#latex-math\\">LaTeX Math</a></li>
+<li><a href=\\"#plantuml\\">PlantUML</a></li>
+<li><a href=\\"#mermaid\\">Mermaid</a></li>
+<li><a href=\\"#footnotes\\">Footnotes</a></li>
+</ul>
+<!-- /TOC -->
+<h2>VS Code Config</h2>
+<ol>
+<li>
+<p>Install <a href=\\"https://code.visualstudio.com/\\">Visual Studio Code</a></p>
+</li>
+<li>
+<p>Install the
+<a href=\\"https://marketplace.visualstudio.com/items?itemName=stasson-vscode.markdown-gfm-pack\\">markdown-gfm-pack</a>
+extension.</p>
+</li>
+<li>
+<p>Install the
+<a href=\\"https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker\\">code-spell-checker</a>
+extension.</p>
+</li>
+<li>
+<p>Configure VS Code</p>
+</li>
+</ol>
+<ul>
+<li>
+<p><code>.vscode/settings.json</code></p>
+<pre class=\\"language-json\\"><code class=\\"language-json\\"><span class=\\"token punctuation\\">{</span>
+  <span class=\\"token property\\">\\"markdown-toc.depthFrom\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token number\\">2</span><span class=\\"token punctuation\\">,</span>
+  <span class=\\"token property\\">\\"markdown-toc.depthTo\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token number\\">3</span><span class=\\"token punctuation\\">,</span>
+  <span class=\\"token property\\">\\"mdmath.delimiters\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token string\\">\\"gitlab\\"</span>
+<span class=\\"token punctuation\\">}</span>
+</code></pre>
+</li>
+<li>
+<p><code>.editorconfig</code></p>
+<pre class=\\"language-python\\"><code class=\\"language-python\\"><span class=\\"token punctuation\\">[</span><span class=\\"token operator\\">*</span><span class=\\"token punctuation\\">.</span><span class=\\"token punctuation\\">{</span>md<span class=\\"token punctuation\\">,</span>txt<span class=\\"token punctuation\\">}</span><span class=\\"token punctuation\\">]</span>
+max_line_length <span class=\\"token operator\\">=</span> <span class=\\"token number\\">80</span>
+indent_style <span class=\\"token operator\\">=</span> space
+indent_size <span class=\\"token operator\\">=</span> <span class=\\"token number\\">2</span>
+trim_trailing_whitespace <span class=\\"token operator\\">=</span> false
+</code></pre>
+</li>
+<li>
+<p><code>.prettierrc</code></p>
+<pre class=\\"language-json\\"><code class=\\"language-json\\"><span class=\\"token punctuation\\">{</span>
+  <span class=\\"token property\\">\\"singleQuote\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token boolean\\">true</span><span class=\\"token punctuation\\">,</span>
+  <span class=\\"token property\\">\\"semi\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token boolean\\">false</span><span class=\\"token punctuation\\">,</span>
+  <span class=\\"token property\\">\\"proseWrap\\"</span><span class=\\"token operator\\">:</span> <span class=\\"token string\\">\\"always\\"</span>
+<span class=\\"token punctuation\\">}</span>
+</code></pre>
+</li>
+</ul>
+<p>References:</p>
+<ul>
+<li>
+<p><a href=\\"http://code.visualstudio.com/docs/languages/markdown\\">Visual Studio Code's Markdown Support</a></p>
+</li>
+<li>
+<p><a href=\\"https://help.github.com/articles/markdown-basics/\\">Markdown Syntax Reference</a></p>
+</li>
+<li>
+<p><a href=\\"https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts\\">markdown-shortcuts</a></p>
+</li>
+<li>
+<p><a href=\\"https://marketplace.visualstudio.com/items?itemName=huntertran.auto-markdown-toc\\">auto-markdown-toc</a></p>
+</li>
+<li>
+<p><a href=\\"https://marketplace.visualstudio.com/items?itemName=csholmq.excel-to-markdown-table\\">excel-to-markdown-table</a></p>
+</li>
+<li>
+<p><a href=\\"https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-images\\">docs-images</a></p>
+</li>
+</ul>
+<h2>Markdownlint</h2>
+<pre class=\\"language-bash\\"><code class=\\"language-bash\\"><span class=\\"token function\\">npm</span> <span class=\\"token function\\">install</span> -g markdownlint-cli
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Inline config</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Disable all rules</td>
+<td><code>&lt;!-- markdownlint-disable --&gt;</code></td>
+</tr>
+<tr>
+<td>Enable all rules</td>
+<td><code>&lt;!-- markdownlint-enable --&gt;</code></td>
+</tr>
+<tr>
+<td>Disable one or more rules by name</td>
+<td><code>&lt;!-- - markdownlint-disable MD001 MD005 --&gt;</code></td>
+</tr>
+<tr>
+<td>Enable one or more rules by name</td>
+<td><code>&lt;!-- markdownlint-enable MD001 MD005 --&gt;</code></td>
+</tr>
+<tr>
+<td>Capture the current rule configuration</td>
+<td><code>&lt;!-- markdownlint-capture --&gt;</code></td>
+</tr>
+<tr>
+<td>Restore the captured rule configuration</td>
+<td><code>&lt;!-- markdownlint-restore --&gt;</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>see the
+<a href=\\"https://github.com/DavidAnson/markdownlint#configuration\\">configuration section</a>
+and the
+<a href=\\"https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md\\">rules</a> for
+more</p>
+</blockquote>
+<h2>Front Matter</h2>
+<p>Front matter is metadata included at the beginning of a Markdown document,
+preceding its content.</p>
+<pre class=\\"language-yaml\\"><code class=\\"language-yaml\\"><span class=\\"token punctuation\\">---</span>
+<span class=\\"token key atrule\\">title</span><span class=\\"token punctuation\\">:</span> Markdown Cheatsheet
+<span class=\\"token key atrule\\">version</span><span class=\\"token punctuation\\">:</span> <span class=\\"token number\\">1.0</span>
+<span class=\\"token punctuation\\">---</span>
+
+</code></pre>
+<h2>Heading</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token title important\\"><span class=\\"token punctuation\\">#</span> H1</span>
+
+<span class=\\"token title important\\"><span class=\\"token punctuation\\">##</span> H2</span>
+
+<span class=\\"token title important\\"><span class=\\"token punctuation\\">###</span> H3</span>
+
+<span class=\\"token title important\\"><span class=\\"token punctuation\\">####</span> H4</span>
+
+<span class=\\"token title important\\"><span class=\\"token punctuation\\">#####</span> H5</span>
+
+<span class=\\"token title important\\"><span class=\\"token punctuation\\">######</span> H6</span>
+</code></pre>
+<h2>Horizontal rule</h2>
+<pre class=\\"language-mrkdown\\"><code class=\\"language-mrkdown\\">---
+</code></pre>
+<h2>Styling</h2>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>Syntax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Italic</em></td>
+<td><code>_Italic_</code></td>
+</tr>
+<tr>
+<td><strong>Bold</strong></td>
+<td><code>**Bold**</code></td>
+</tr>
+<tr>
+<td><s>Strikethrough</s></td>
+<td><code>~~Strikethrough~~</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Blockquote</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token blockquote punctuation\\">></span> Blockquotes are very handy to emulate reply text. This line is part of the
+<span class=\\"token blockquote punctuation\\">></span> same quote.
+
+Quote break.
+
+<span class=\\"token blockquote punctuation\\">></span> This is a very long line that will still be quoted properly when it wraps. Oh
+<span class=\\"token blockquote punctuation\\">></span> boy let's keep writing to make sure this is long enough to actually wrap for
+<span class=\\"token blockquote punctuation\\">></span> everyone. Oh, you can <span class=\\"token italic\\"><span class=\\"token punctuation\\">_</span><span class=\\"token content\\">put</span><span class=\\"token punctuation\\">_</span></span> <span class=\\"token bold\\"><span class=\\"token punctuation\\">**</span><span class=\\"token content\\">Markdown</span><span class=\\"token punctuation\\">**</span></span> into a blockquote.
+</code></pre>
+<h2>Lists</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token list punctuation\\">-</span> Item
+  <span class=\\"token list punctuation\\">-</span> Item
+    <span class=\\"token list punctuation\\">-</span> Item
+
+<span class=\\"token list punctuation\\">1.</span> Item 1
+<span class=\\"token list punctuation\\">2.</span> Item 2
+<span class=\\"token list punctuation\\">3.</span> Item 3
+
+<span class=\\"token list punctuation\\">-</span> [ ] Incomplete item
+<span class=\\"token list punctuation\\">-</span> [x] Complete item
+</code></pre>
+<h2>Links</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token list punctuation\\">-</span> This is an <span class=\\"token url\\">[<span class=\\"token content\\">inline-style link</span>](https://www.google.com)</span>
+<span class=\\"token list punctuation\\">-</span> This is a <span class=\\"token url\\">[<span class=\\"token content\\">link to a repository file in the same directory</span>](index.md)</span>
+<span class=\\"token list punctuation\\">-</span> This is a <span class=\\"token url\\">[<span class=\\"token content\\">relative link to a readme one directory higher</span>](../README.md)</span>
+<span class=\\"token list punctuation\\">-</span> This is a
+  [link that also has title text](https://www.google.com 'This link takes you to Google!')
+
+Using header ID anchors:
+
+<span class=\\"token list punctuation\\">-</span> This links to
+  <span class=\\"token url\\">[<span class=\\"token content\\">a section on a different Markdown page, using a \\"#\\" and the header ID</span>](index.md#overview)</span>
+<span class=\\"token list punctuation\\">-</span> This links to
+  <span class=\\"token url\\">[<span class=\\"token content\\">a different section on the same page, using a \\"#\\" and the header ID</span>](#header-ids-and-links)</span>
+
+Using references:
+
+<span class=\\"token list punctuation\\">-</span> This is a <span class=\\"token url\\">[<span class=\\"token content\\">reference-style link, see
+  below</span>][<span class=\\"token variable\\">arbitrary case-insensitive reference text</span>]</span>
+<span class=\\"token list punctuation\\">-</span> You can <span class=\\"token url\\">[<span class=\\"token content\\">use numbers for reference-style link definitions, see below</span>][<span class=\\"token variable\\">1</span>]</span>
+<span class=\\"token list punctuation\\">-</span> Or leave it empty and use the [link text itself][], see below.
+
+Some text to show that the reference links can follow later.
+
+<span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">arbitrary case-insensitive reference text</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> https://www.mozilla.org/en-US/</span>
+<span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">1</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> https://slashdot.org</span>
+<span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">link text itself</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> https://www.reddit.com</span>
+</code></pre>
+<h2>Code</h2>
+<p>Some <code>\`inline code\`</code></p>
+<pre class=\\"language-java\\"><code class=\\"language-java\\">\`\`\`javascript
+<span class=\\"token comment\\">// An highlighted block</span>
+<span class=\\"token keyword\\">var</span> foo <span class=\\"token operator\\">=</span> <span class=\\"token string\\">'bar'</span>
+\`\`\`
+</code></pre>
+<h2>Tables</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token table\\"><span class=\\"token table-header-row\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\"> Item     </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\"> Value  </span><span class=\\"token punctuation\\">|</span>
+</span><span class=\\"token table-line\\"><span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">--------</span> <span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">------</span> <span class=\\"token punctuation\\">|</span>
+</span><span class=\\"token table-data-rows\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> Computer </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> \\\\$1600 </span><span class=\\"token punctuation\\">|</span>
+<span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> Phone    </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> \\\\$12   </span><span class=\\"token punctuation\\">|</span>
+<span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> Pipe     </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> \\\\$1    </span><span class=\\"token punctuation\\">|</span>
+</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Computer</td>
+<td>$1600</td>
+</tr>
+<tr>
+<td>Phone</td>
+<td>$12</td>
+</tr>
+<tr>
+<td>Pipe</td>
+<td>$1</td>
+</tr>
+</tbody>
+</table>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token table\\"><span class=\\"token table-header-row\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\"> Column 1 </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\">      Column 2 </span><span class=\\"token punctuation\\">|</span>
+</span><span class=\\"token table-line\\"><span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">:------:</span> <span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">------------:</span> <span class=\\"token punctuation\\">|</span>
+</span><span class=\\"token table-data-rows\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> centered </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> right-aligned </span><span class=\\"token punctuation\\">|</span>
+</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th style=\\"text-align:center\\">Column 1</th>
+<th style=\\"text-align:right\\">Column 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=\\"text-align:center\\">centered</td>
+<td style=\\"text-align:right\\">right-aligned</td>
+</tr>
+</tbody>
+</table>
+<h2>LaTeX Math</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\">Some inline maths: $<span class=\\"token code keyword\\">\`a^2+b^2=c^2\`</span>$
+</code></pre>
+<p>Some inline maths: $<code>a^2+b^2=c^2</code>$</p>
+<pre><code>\`\`\`math
+a^2+b^2=c^2
+\`\`\`
+</code></pre>
+<pre class=\\"language-math\\"><code class=\\"language-math\\">a^2+b^2=c^2
+</code></pre>
+<blockquote>
+<p>A great way to get started with <a href=\\"https://katex.org/docs/supported.html\\">KaTeX</a>
+is to visit <a href=\\"https://katex.org/#demo\\">The KaTeX Demo</a>.</p>
+</blockquote>
+<h2>PlantUML</h2>
+<pre><code>\`\`\`plantuml
+Bob -&gt; Alice : hello
+Alice -&gt; Bob : hi
+\`\`\`
+</code></pre>
+<pre class=\\"language-plantuml\\"><code class=\\"language-plantuml\\">Bob -&gt; Alice : hello
+Alice -&gt; Bob : hi
+</code></pre>
+<blockquote>
+<p>A great way to get started with <a href=\\"https://plantuml.com/\\">PlantUML</a> is to visit
+<a href=\\"https://www.planttext.com/\\">Plant Text UML Editor</a>.</p>
+</blockquote>
+<h2>Mermaid</h2>
+<pre><code>\`\`\`mermaid
+graph TD;
+  A--&gt;B;
+  A--&gt;C;
+  B--&gt;D;
+  C--&gt;D;
+\`\`\`
+</code></pre>
+<pre class=\\"language-mermaid\\"><code class=\\"language-mermaid\\">graph TD;
+  A--&gt;B;
+  A--&gt;C;
+  B--&gt;D;
+  C--&gt;D;
+</code></pre>
+<blockquote>
+<p>A great way to get started with
+<a href=\\"https://mermaid-js.github.io/mermaid\\">Mermaid</a> is to visit
+<a href=\\"https://mermaidjs.github.io/mermaid-live-editor\\">The mermaid live editor</a>.</p>
+</blockquote>
+<h2>Footnotes</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\">A footnote reference tag looks like this: [^1]
+
+This reference tag is a mix of letters and numbers. [^footnote-42]
+
+<span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">^1</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> This</span> is the text inside a footnote.
+<span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">^footnote-42</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> This</span> is another footnote.
+</code></pre>
+<p>A footnote reference tag looks like this: [^1]</p>
+<p>This reference tag is a mix of letters and numbers. [^footnote-42]</p>
+<p>[^1]: This is the text inside a footnote.
+[^footnote-42]: This is another footnote.</p>
+"
+`;

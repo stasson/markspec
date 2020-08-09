@@ -1,0 +1,24 @@
+{
+  "name": "@markspec/markdown-it-markspec",
+  "version": "1.0.0",
+  "description": "plantuml plugin for markdown-it",
+  "keywords": [
+    "markspec",
+    "markdown-it"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "markdown-it-prism": "^2.1.1"
+  },
+  "devDependencies": {
+    "markdown-it": "^8.4.2"
+  }
+}
