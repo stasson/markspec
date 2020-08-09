@@ -16,11 +16,13 @@ version: 1.0
 - [Blockquote](#blockquote)
 - [Lists](#lists)
 - [Links](#links)
+- [Autolink](#autolink)
 - [Code](#code)
 - [Tables](#tables)
 - [LaTeX Math](#latex-math)
 - [PlantUML](#plantuml)
 - [Mermaid](#mermaid)
+- [Emoji](#emoji)
 - [Footnotes](#footnotes)
 
 <!-- /TOC -->
@@ -135,7 +137,7 @@ version: 1.0
 
 ## Horizontal rule
 
-```mrkdown
+```markdown
 ---
 ```
 
@@ -175,6 +177,17 @@ Quote break.
 - [x] Complete item
 ```
 
+- Item
+  - Item
+    - Item
+
+1. Item 1
+2. Item 2
+3. Item 3
+
+- [ ] Incomplete item
+- [x] Complete item
+
 ## Links
 
 ```markdown
@@ -182,7 +195,7 @@ Quote break.
 - This is a [link to a repository file in the same directory](index.md)
 - This is a [relative link to a readme one directory higher](../README.md)
 - This is a
-  [link that also has title text](https://www.google.com 'This link takes you to Google!')
+  [link that also has title text](https://www.google.com "This link takes you to Google!")
 
 Using header ID anchors:
 
@@ -204,6 +217,44 @@ Some text to show that the reference links can follow later.
 [1]: https://slashdot.org
 [link text itself]: https://www.reddit.com
 ```
+
+- This is an [inline-style link](https://www.google.com)
+- This is a [link to a repository file in the same directory](index.md)
+- This is a [relative link to a readme one directory higher](../README.md)
+- This is a
+  [link that also has title text](https://www.google.com "This link takes you to Google!")
+
+Using header ID anchors:
+
+- This links to
+  [a section on a different Markdown page, using a "#" and the header ID](index.md#overview)
+- This links to
+  [a different section on the same page, using a "#" and the header ID](#header-ids-and-links)
+
+Using references:
+
+- This is a [reference-style link, see
+  below][arbitrary case-insensitive reference text]
+- You can [use numbers for reference-style link definitions, see below][1]
+- Or leave it empty and use the [link text itself][], see below.
+
+Some text to show that the reference links can follow later.
+
+[arbitrary case-insensitive reference text]: https://www.mozilla.org/en-US/
+[1]: https://slashdot.org
+[link text itself]: https://www.reddit.com
+
+## Autolink
+
+```markdown
+https://markdown-it.github.io/
+
+<https://markdown-it.github.io/>
+```
+
+https://markdown-it.github.io/
+
+<https://markdown-it.github.io/>
 
 ## Code
 
@@ -303,6 +354,12 @@ graph TD;
 > A great way to get started with
 > [Mermaid](https://mermaid-js.github.io/mermaid) is to visit
 > [The mermaid live editor](https://mermaidjs.github.io/mermaid-live-editor).
+
+## Emoji
+
+`:+1:`: :+1:
+
+`:)`: :)
 
 ## Footnotes
 

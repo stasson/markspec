@@ -2,9 +2,9 @@
 
 exports[`markdown-it-markspec renders markspec 1`] = `
 "<hr />
-<h2>title: Markdown Cheatsheet
+<h2 id=\\"title%3A-markdown-cheatsheetversion%3A-1.0\\">title: Markdown Cheatsheet
 version: 1.0</h2>
-<h1>Markdown Cheatsheet</h1>
+<h1 id=\\"markdown-cheatsheet\\">Markdown Cheatsheet</h1>
 <!-- TOC -->
 <ul>
 <li><a href=\\"#vs-code-config\\">VS Code Config</a></li>
@@ -16,15 +16,17 @@ version: 1.0</h2>
 <li><a href=\\"#blockquote\\">Blockquote</a></li>
 <li><a href=\\"#lists\\">Lists</a></li>
 <li><a href=\\"#links\\">Links</a></li>
+<li><a href=\\"#autolink\\">Autolink</a></li>
 <li><a href=\\"#code\\">Code</a></li>
 <li><a href=\\"#tables\\">Tables</a></li>
 <li><a href=\\"#latex-math\\">LaTeX Math</a></li>
 <li><a href=\\"#plantuml\\">PlantUML</a></li>
 <li><a href=\\"#mermaid\\">Mermaid</a></li>
+<li><a href=\\"#emoji\\">Emoji</a></li>
 <li><a href=\\"#footnotes\\">Footnotes</a></li>
 </ul>
 <!-- /TOC -->
-<h2>VS Code Config</h2>
+<h2 id=\\"vs-code-config\\">VS Code Config</h2>
 <ol>
 <li>
 <p>Install <a href=\\"https://code.visualstudio.com/\\">Visual Studio Code</a></p>
@@ -93,7 +95,7 @@ trim_trailing_whitespace <span class=\\"token operator\\">=</span> false
 <p><a href=\\"https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-images\\">docs-images</a></p>
 </li>
 </ul>
-<h2>Markdownlint</h2>
+<h2 id=\\"markdownlint\\">Markdownlint</h2>
 <pre class=\\"language-bash\\"><code class=\\"language-bash\\"><span class=\\"token function\\">npm</span> <span class=\\"token function\\">install</span> -g markdownlint-cli
 </code></pre>
 <table>
@@ -137,7 +139,7 @@ and the
 <a href=\\"https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md\\">rules</a> for
 more</p>
 </blockquote>
-<h2>Front Matter</h2>
+<h2 id=\\"front-matter\\">Front Matter</h2>
 <p>Front matter is metadata included at the beginning of a Markdown document,
 preceding its content.</p>
 <pre class=\\"language-yaml\\"><code class=\\"language-yaml\\"><span class=\\"token punctuation\\">---</span>
@@ -146,7 +148,7 @@ preceding its content.</p>
 <span class=\\"token punctuation\\">---</span>
 
 </code></pre>
-<h2>Heading</h2>
+<h2 id=\\"heading\\">Heading</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token title important\\"><span class=\\"token punctuation\\">#</span> H1</span>
 
 <span class=\\"token title important\\"><span class=\\"token punctuation\\">##</span> H2</span>
@@ -159,10 +161,10 @@ preceding its content.</p>
 
 <span class=\\"token title important\\"><span class=\\"token punctuation\\">######</span> H6</span>
 </code></pre>
-<h2>Horizontal rule</h2>
-<pre class=\\"language-mrkdown\\"><code class=\\"language-mrkdown\\">---
+<h2 id=\\"horizontal-rule\\">Horizontal rule</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token hr punctuation\\">---</span>
 </code></pre>
-<h2>Styling</h2>
+<h2 id=\\"styling\\">Styling</h2>
 <table>
 <thead>
 <tr>
@@ -185,7 +187,7 @@ preceding its content.</p>
 </tr>
 </tbody>
 </table>
-<h2>Blockquote</h2>
+<h2 id=\\"blockquote\\">Blockquote</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token blockquote punctuation\\">></span> Blockquotes are very handy to emulate reply text. This line is part of the
 <span class=\\"token blockquote punctuation\\">></span> same quote.
 
@@ -195,7 +197,7 @@ Quote break.
 <span class=\\"token blockquote punctuation\\">></span> boy let's keep writing to make sure this is long enough to actually wrap for
 <span class=\\"token blockquote punctuation\\">></span> everyone. Oh, you can <span class=\\"token italic\\"><span class=\\"token punctuation\\">_</span><span class=\\"token content\\">put</span><span class=\\"token punctuation\\">_</span></span> <span class=\\"token bold\\"><span class=\\"token punctuation\\">**</span><span class=\\"token content\\">Markdown</span><span class=\\"token punctuation\\">**</span></span> into a blockquote.
 </code></pre>
-<h2>Lists</h2>
+<h2 id=\\"lists\\">Lists</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token list punctuation\\">-</span> Item
   <span class=\\"token list punctuation\\">-</span> Item
     <span class=\\"token list punctuation\\">-</span> Item
@@ -207,12 +209,32 @@ Quote break.
 <span class=\\"token list punctuation\\">-</span> [ ] Incomplete item
 <span class=\\"token list punctuation\\">-</span> [x] Complete item
 </code></pre>
-<h2>Links</h2>
+<ul>
+<li>Item
+<ul>
+<li>Item
+<ul>
+<li>Item</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+<ul class=\\"contains-task-list\\">
+<li class=\\"task-list-item\\"><input class=\\"task-list-item-checkbox\\" disabled=\\"\\" type=\\"checkbox\\"> Incomplete item</li>
+<li class=\\"task-list-item\\"><input class=\\"task-list-item-checkbox\\" checked=\\"\\" disabled=\\"\\" type=\\"checkbox\\"> Complete item</li>
+</ul>
+<h2 id=\\"links\\">Links</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token list punctuation\\">-</span> This is an <span class=\\"token url\\">[<span class=\\"token content\\">inline-style link</span>](https://www.google.com)</span>
 <span class=\\"token list punctuation\\">-</span> This is a <span class=\\"token url\\">[<span class=\\"token content\\">link to a repository file in the same directory</span>](index.md)</span>
 <span class=\\"token list punctuation\\">-</span> This is a <span class=\\"token url\\">[<span class=\\"token content\\">relative link to a readme one directory higher</span>](../README.md)</span>
 <span class=\\"token list punctuation\\">-</span> This is a
-  [link that also has title text](https://www.google.com 'This link takes you to Google!')
+  <span class=\\"token url\\">[<span class=\\"token content\\">link that also has title text</span>](https://www.google.com <span class=\\"token string\\">\\"This link takes you to Google!\\"</span>)</span>
 
 Using header ID anchors:
 
@@ -234,14 +256,43 @@ Some text to show that the reference links can follow later.
 <span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">1</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> https://slashdot.org</span>
 <span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">link text itself</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> https://www.reddit.com</span>
 </code></pre>
-<h2>Code</h2>
+<ul>
+<li>This is an <a href=\\"https://www.google.com\\">inline-style link</a></li>
+<li>This is a <a href=\\"index.md\\">link to a repository file in the same directory</a></li>
+<li>This is a <a href=\\"../README.md\\">relative link to a readme one directory higher</a></li>
+<li>This is a
+<a href=\\"https://www.google.com\\" title=\\"This link takes you to Google!\\">link that also has title text</a></li>
+</ul>
+<p>Using header ID anchors:</p>
+<ul>
+<li>This links to
+<a href=\\"index.md#overview\\">a section on a different Markdown page, using a &quot;#&quot; and the header ID</a></li>
+<li>This links to
+<a href=\\"#header-ids-and-links\\">a different section on the same page, using a &quot;#&quot; and the header ID</a></li>
+</ul>
+<p>Using references:</p>
+<ul>
+<li>This is a <a href=\\"https://www.mozilla.org/en-US/\\">reference-style link, see
+below</a></li>
+<li>You can <a href=\\"https://slashdot.org\\">use numbers for reference-style link definitions, see below</a></li>
+<li>Or leave it empty and use the <a href=\\"https://www.reddit.com\\">link text itself</a>, see below.</li>
+</ul>
+<p>Some text to show that the reference links can follow later.</p>
+<h2 id=\\"autolink\\">Autolink</h2>
+<pre class=\\"language-markdown\\"><code class=\\"language-markdown\\">https://markdown-it.github.io/
+
+&lt;https://markdown-it.github.io/>
+</code></pre>
+<p><a href=\\"https://markdown-it.github.io/\\">https://markdown-it.github.io/</a></p>
+<p><a href=\\"https://markdown-it.github.io/\\">https://markdown-it.github.io/</a></p>
+<h2 id=\\"code\\">Code</h2>
 <p>Some <code>\`inline code\`</code></p>
 <pre class=\\"language-java\\"><code class=\\"language-java\\">\`\`\`javascript
 <span class=\\"token comment\\">// An highlighted block</span>
 <span class=\\"token keyword\\">var</span> foo <span class=\\"token operator\\">=</span> <span class=\\"token string\\">'bar'</span>
 \`\`\`
 </code></pre>
-<h2>Tables</h2>
+<h2 id=\\"tables\\">Tables</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\"><span class=\\"token table\\"><span class=\\"token table-header-row\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\"> Item     </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-header important\\"> Value  </span><span class=\\"token punctuation\\">|</span>
 </span><span class=\\"token table-line\\"><span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">--------</span> <span class=\\"token punctuation\\">|</span> <span class=\\"token punctuation\\">------</span> <span class=\\"token punctuation\\">|</span>
 </span><span class=\\"token table-data-rows\\"><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> Computer </span><span class=\\"token punctuation\\">|</span><span class=\\"token table-data\\"> \\\\$1600 </span><span class=\\"token punctuation\\">|</span>
@@ -288,34 +339,30 @@ Some text to show that the reference links can follow later.
 </tr>
 </tbody>
 </table>
-<h2>LaTeX Math</h2>
+<h2 id=\\"latex-math\\">LaTeX Math</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\">Some inline maths: $<span class=\\"token code keyword\\">\`a^2+b^2=c^2\`</span>$
 </code></pre>
-<p>Some inline maths: $<code>a^2+b^2=c^2</code>$</p>
+<p>Some inline maths: <eq><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math xmlns=\\"http://www.w3.org/1998/Math/MathML\\"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding=\\"application/x-tex\\">a^2+b^2=c^2</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.897438em;vertical-align:-0.08333em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">a</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8141079999999999em;\\"><span style=\\"top:-3.063em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span><span class=\\"mspace\\" style=\\"margin-right:0.2222222222222222em;\\"></span><span class=\\"mbin\\">+</span><span class=\\"mspace\\" style=\\"margin-right:0.2222222222222222em;\\"></span></span><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.8141079999999999em;vertical-align:0em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">b</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8141079999999999em;\\"><span style=\\"top:-3.063em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span><span class=\\"mspace\\" style=\\"margin-right:0.2777777777777778em;\\"></span><span class=\\"mrel\\">=</span><span class=\\"mspace\\" style=\\"margin-right:0.2777777777777778em;\\"></span></span><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.8141079999999999em;vertical-align:0em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">c</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8141079999999999em;\\"><span style=\\"top:-3.063em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span></span></span></span></eq></p>
 <pre><code>\`\`\`math
 a^2+b^2=c^2
 \`\`\`
 </code></pre>
-<pre class=\\"language-math\\"><code class=\\"language-math\\">a^2+b^2=c^2
-</code></pre>
+<section><eqn><span class=\\"katex-display\\"><span class=\\"katex\\"><span class=\\"katex-mathml\\"><math xmlns=\\"http://www.w3.org/1998/Math/MathML\\" display=\\"block\\"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding=\\"application/x-tex\\">a^2+b^2=c^2</annotation></semantics></math></span><span class=\\"katex-html\\" aria-hidden=\\"true\\"><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.9474379999999999em;vertical-align:-0.08333em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">a</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8641079999999999em;\\"><span style=\\"top:-3.113em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span><span class=\\"mspace\\" style=\\"margin-right:0.2222222222222222em;\\"></span><span class=\\"mbin\\">+</span><span class=\\"mspace\\" style=\\"margin-right:0.2222222222222222em;\\"></span></span><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.8641079999999999em;vertical-align:0em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">b</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8641079999999999em;\\"><span style=\\"top:-3.113em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span><span class=\\"mspace\\" style=\\"margin-right:0.2777777777777778em;\\"></span><span class=\\"mrel\\">=</span><span class=\\"mspace\\" style=\\"margin-right:0.2777777777777778em;\\"></span></span><span class=\\"base\\"><span class=\\"strut\\" style=\\"height:0.8641079999999999em;vertical-align:0em;\\"></span><span class=\\"mord\\"><span class=\\"mord mathnormal\\">c</span><span class=\\"msupsub\\"><span class=\\"vlist-t\\"><span class=\\"vlist-r\\"><span class=\\"vlist\\" style=\\"height:0.8641079999999999em;\\"><span style=\\"top:-3.113em;margin-right:0.05em;\\"><span class=\\"pstrut\\" style=\\"height:2.7em;\\"></span><span class=\\"sizing reset-size6 size3 mtight\\"><span class=\\"mord mtight\\">2</span></span></span></span></span></span></span></span></span></span></span></span></eqn></section></math>
 <blockquote>
 <p>A great way to get started with <a href=\\"https://katex.org/docs/supported.html\\">KaTeX</a>
 is to visit <a href=\\"https://katex.org/#demo\\">The KaTeX Demo</a>.</p>
 </blockquote>
-<h2>PlantUML</h2>
+<h2 id=\\"plantuml\\">PlantUML</h2>
 <pre><code>\`\`\`plantuml
 Bob -&gt; Alice : hello
 Alice -&gt; Bob : hi
 \`\`\`
 </code></pre>
-<pre class=\\"language-plantuml\\"><code class=\\"language-plantuml\\">Bob -&gt; Alice : hello
-Alice -&gt; Bob : hi
-</code></pre>
-<blockquote>
+<p><img src=\\"data:image/svg+xml,%3c%3fxml version='1.0' encoding='UTF-8' standalone='no'%3f%3e%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' contentScriptType='application/ecmascript' contentStyleType='text/css' height='157px' preserveAspectRatio='none' style='width:120px%3bheight:157px%3b' version='1.1' viewBox='0 0 120 157' width='120px' zoomAndPan='magnify'%3e%3cdefs%3e%3cfilter height='300%25' id='fq4i3lrj1mpl' width='300%25' x='-1' y='-1'%3e%3cfeGaussianBlur result='blurOut' stdDeviation='2.0'/%3e%3cfeColorMatrix in='blurOut' result='blurOut2' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0'/%3e%3cfeOffset dx='4.0' dy='4.0' in='blurOut2' result='blurOut3'/%3e%3cfeBlend in='SourceGraphic' in2='blurOut3' mode='normal'/%3e%3c/filter%3e%3c/defs%3e%3cg%3e%3cline style='stroke: %23A80036%3b stroke-width: 1.0%3b stroke-dasharray: 5.0%2c5.0%3b' x1='30' x2='30' y1='38.4883' y2='117.1094'/%3e%3cline style='stroke: %23A80036%3b stroke-width: 1.0%3b stroke-dasharray: 5.0%2c5.0%3b' x1='87' x2='87' y1='38.4883' y2='117.1094'/%3e%3crect fill='%23FEFECE' filter='url(%23fq4i3lrj1mpl)' height='30.4883' style='stroke: %23A80036%3b stroke-width: 1.5%3b' width='40' x='8' y='3'/%3e%3ctext fill='black' font-family='sans-serif' font-size='14' lengthAdjust='spacingAndGlyphs' textLength='26' x='15' y='23.5352'%3eBob%3c/text%3e%3crect fill='%23FEFECE' filter='url(%23fq4i3lrj1mpl)' height='30.4883' style='stroke: %23A80036%3b stroke-width: 1.5%3b' width='40' x='8' y='116.1094'/%3e%3ctext fill='black' font-family='sans-serif' font-size='14' lengthAdjust='spacingAndGlyphs' textLength='26' x='15' y='136.6445'%3eBob%3c/text%3e%3crect fill='%23FEFECE' filter='url(%23fq4i3lrj1mpl)' height='30.4883' style='stroke: %23A80036%3b stroke-width: 1.5%3b' width='47' x='62' y='3'/%3e%3ctext fill='black' font-family='sans-serif' font-size='14' lengthAdjust='spacingAndGlyphs' textLength='33' x='69' y='23.5352'%3eAlice%3c/text%3e%3crect fill='%23FEFECE' filter='url(%23fq4i3lrj1mpl)' height='30.4883' style='stroke: %23A80036%3b stroke-width: 1.5%3b' width='47' x='62' y='116.1094'/%3e%3ctext fill='black' font-family='sans-serif' font-size='14' lengthAdjust='spacingAndGlyphs' textLength='33' x='69' y='136.6445'%3eAlice%3c/text%3e%3cpolygon fill='%23A80036' points='75.5%2c65.7988%2c85.5%2c69.7988%2c75.5%2c73.7988%2c79.5%2c69.7988' style='stroke: %23A80036%3b stroke-width: 1.0%3b'/%3e%3cline style='stroke: %23A80036%3b stroke-width: 1.0%3b' x1='30' x2='81.5' y1='69.7988' y2='69.7988'/%3e%3ctext fill='black' font-family='sans-serif' font-size='13' lengthAdjust='spacingAndGlyphs' textLength='31' x='37' y='65.0566'%3ehello%3c/text%3e%3cpolygon fill='%23A80036' points='41%2c95.1094%2c31%2c99.1094%2c41%2c103.1094%2c37%2c99.1094' style='stroke: %23A80036%3b stroke-width: 1.0%3b'/%3e%3cline style='stroke: %23A80036%3b stroke-width: 1.0%3b' x1='35' x2='86.5' y1='99.1094' y2='99.1094'/%3e%3ctext fill='black' font-family='sans-serif' font-size='13' lengthAdjust='spacingAndGlyphs' textLength='12' x='47' y='94.3672'%3ehi%3c/text%3e%3c/g%3e%3c/svg%3e\\" class=\\"markspec plantuml plantuml-uml\\" alt=\\"uml diagram\\"></p><blockquote>
 <p>A great way to get started with <a href=\\"https://plantuml.com/\\">PlantUML</a> is to visit
 <a href=\\"https://www.planttext.com/\\">Plant Text UML Editor</a>.</p>
 </blockquote>
-<h2>Mermaid</h2>
+<h2 id=\\"mermaid\\">Mermaid</h2>
 <pre><code>\`\`\`mermaid
 graph TD;
   A--&gt;B;
@@ -324,18 +371,19 @@ graph TD;
   C--&gt;D;
 \`\`\`
 </code></pre>
-<pre class=\\"language-mermaid\\"><code class=\\"language-mermaid\\">graph TD;
-  A--&gt;B;
-  A--&gt;C;
-  B--&gt;D;
-  C--&gt;D;
-</code></pre>
-<blockquote>
+<div class=\\"mermaid\\">graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;</div><blockquote>
 <p>A great way to get started with
 <a href=\\"https://mermaid-js.github.io/mermaid\\">Mermaid</a> is to visit
 <a href=\\"https://mermaidjs.github.io/mermaid-live-editor\\">The mermaid live editor</a>.</p>
 </blockquote>
-<h2>Footnotes</h2>
+<h2 id=\\"emoji\\">Emoji</h2>
+<p><code>:+1:</code>: 👍</p>
+<p><code>:)</code>: 😃</p>
+<h2 id=\\"footnotes\\">Footnotes</h2>
 <pre class=\\"language-markdown\\"><code class=\\"language-markdown\\">A footnote reference tag looks like this: [^1]
 
 This reference tag is a mix of letters and numbers. [^footnote-42]
@@ -343,9 +391,16 @@ This reference tag is a mix of letters and numbers. [^footnote-42]
 <span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">^1</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> This</span> is the text inside a footnote.
 <span class=\\"token url-reference url\\"><span class=\\"token punctuation\\">[</span><span class=\\"token variable\\">^footnote-42</span><span class=\\"token punctuation\\">]</span><span class=\\"token punctuation\\">:</span> This</span> is another footnote.
 </code></pre>
-<p>A footnote reference tag looks like this: [^1]</p>
-<p>This reference tag is a mix of letters and numbers. [^footnote-42]</p>
-<p>[^1]: This is the text inside a footnote.
-[^footnote-42]: This is another footnote.</p>
+<p>A footnote reference tag looks like this: <sup class=\\"footnote-ref\\"><a href=\\"#fn1\\" id=\\"fnref1\\">[1]</a></sup></p>
+<p>This reference tag is a mix of letters and numbers. <sup class=\\"footnote-ref\\"><a href=\\"#fn2\\" id=\\"fnref2\\">[2]</a></sup></p>
+<hr class=\\"footnotes-sep\\" />
+<section class=\\"footnotes\\">
+<ol class=\\"footnotes-list\\">
+<li id=\\"fn1\\" class=\\"footnote-item\\"><p>This is the text inside a footnote. <a href=\\"#fnref1\\" class=\\"footnote-backref\\">↩︎</a></p>
+</li>
+<li id=\\"fn2\\" class=\\"footnote-item\\"><p>This is another footnote. <a href=\\"#fnref2\\" class=\\"footnote-backref\\">↩︎</a></p>
+</li>
+</ol>
+</section>
 "
 `;
