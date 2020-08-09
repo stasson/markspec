@@ -24,7 +24,10 @@
     "prepare:textmath": "cp ./node_modules/markdown-it-texmath/css/texmath.css ./css/texmath.css"
   },
   "dependencies": {
-    "katex": "^0.10.1",
-    "markdown-it-texmath": "^0.5.5"
+    "katex": "^0.12.0",
+    "markdown-it-texmath": "^0.8.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }

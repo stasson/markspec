@@ -24,6 +24,6 @@
     "test": "jest"
   },
   "dependencies": {
-    "mini-svg-data-uri": "^1.1.3"
+    "mini-svg-data-uri": "^1.2.3"
   }
 }

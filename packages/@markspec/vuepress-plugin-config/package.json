@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "cosmiconfig": "^5.2.1",
-    "find-git-root": "^1.0.2",
+    "find-git-root": "^1.0.4",
     "lodash": "^4.17.15",
     "read-pkg-up": "^6.0.0",
     "remote-origin-url": "^2.0.0"
