@@ -1,6 +1,6 @@
 {
   "name": "markspec",
-  "version": "1.3.9",
+  "version": "2.0.0",
   "description": "technical specification from markdown",
   "keywords": [
     "spec",
@@ -16,14 +16,6 @@
     "test": "__tests__"
   },
   "scripts": {
-    "dev": "vuepress dev --no-cache",
-    "build": "vuepress build"
-  },
-  "dependencies": {
-    "@markspec/vuepress-theme-default": "^1.3.1",
-    "vuepress": "^1.5.3"
-  },
-  "devDependencies": {
-    "medium-zoom": "^1.0.6"
+    "test": "jest"
   }
 }
