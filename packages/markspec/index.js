@@ -1,7 +1,6 @@
 const pkg = require("./package.json");
 const cli = require("@officr/cli")(pkg);
-const { fs, path } = require("@officr/commons");
-const globby = require("globby");
+const { fs, path, glob } = require("@officr/commons");
 const MarkdownIt = require("markdown-it");
 const MarkspecPlugin = require("@markspec/markdown-it-markspec");
 
@@ -19,9 +18,9 @@ cli
   })
   .action(async (patterns, options) => {
     // process args and apply config
-    if (!patterns.length) patterns = ["."];
+    if (!patterns.length) patterns = ["**.md"];
     options = await config(options);
-    const paths = await glob(patterns, options);
+    const paths = await inputs(patterns, options);
     cli.debug({ patterns, options, paths });
 
     if (!paths.length) {
@@ -47,11 +46,9 @@ async function config(options) {
   return options;
 }
 
-async function glob(patterns, options) {
-  return globby(patterns, {
-    ignore: options.ignore,
-    gitignore: options.gitignore,
-    expandDirectories: { extensions: ["md"] },
+async function inputs(patterns, options) {
+  return glob(patterns, {
+    ignore: options.ignore
   });
 }
 
