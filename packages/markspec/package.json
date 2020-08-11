@@ -18,7 +18,6 @@
     "test": "__tests__"
   },
   "scripts": {
-    "test": "jest"
   },
   "dependencies": {
     "@markspec/markdown-it-markspec": "^1.1.0",
