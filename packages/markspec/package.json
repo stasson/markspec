@@ -12,6 +12,8 @@
   },
   "homepage": "https://github.com/stasson/markspec",
   "license": "MIT",
+  "bin": "cli.js",
+  "main": "index.js",
   "directories": {
     "test": "__tests__"
   },
