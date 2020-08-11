@@ -1,6 +1,6 @@
 {
   "name": "@markspec/vuepress-theme-default",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "vuepress plugin preset ",
   "keywords": [
     "markspec",
@@ -14,7 +14,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@markspec/vuepress-plugin-preset": "^1.1.8",
+    "@markspec/vuepress-plugin-preset": "^1.1.9",
     "@vuepress/theme-default": "^1.5.3"
   }
 }
