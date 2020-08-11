@@ -5,7 +5,7 @@ const globby = require("globby");
 const MarkdownIt = require("markdown-it");
 const MarkspecPlugin = require("@markspec/markdown-it-markspec");
 
-cli.config({ console: true, exitCode: true });
+cli.logger.config({ console: true, exitCode: true });
 
 cli
   .command("[...patterns]", "convert markdown to html")
