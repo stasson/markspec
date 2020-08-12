@@ -25,8 +25,11 @@
     "markdown-it-github-headings": "^2.0.0",
     "markdown-it-mermaid-plugin": "^0.1.0",
     "markdown-it-prism": "^2.1.1",
+    "markdown-it-replace-link": "^1.1.0",
     "markdown-it-task-lists": "^2.1.1",
-    "markdown-it-texmath": "^0.8.0"
+    "markdown-it-texmath": "^0.8.0",
+    "@markspec/markdown-it-link": "^1.0.0",
+    "@markspec/markdown-it-sections": "^1.1.1"
   },
   "devDependencies": {
     "markdown-it": "^8.4.2"

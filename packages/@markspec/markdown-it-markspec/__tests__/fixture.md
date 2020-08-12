@@ -250,6 +250,8 @@ Some text to show that the reference links can follow later.
 https://markdown-it.github.io/
 
 <https://markdown-it.github.io/>
+
+[HOME]('./fixture.md#markdown-cheatsheet)
 ```
 
 https://markdown-it.github.io/
@@ -260,12 +262,17 @@ https://markdown-it.github.io/
 
 Some `` `inline code` ``
 
-````java
+````markdown
 ```javascript
 // An highlighted block
 var foo = 'bar'
 ```
 ````
+
+```javascript
+// An highlighted block
+var foo = 'bar'
+```
 
 ## Tables
 
