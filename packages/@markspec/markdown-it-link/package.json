@@ -1,0 +1,22 @@
+{
+  "name": "@markspec/markdown-it-link",
+  "version": "1.0.0",
+  "description": "link plugin for markdown-it",
+  "keywords": [
+    "markspec",
+    "link",
+    "markdown-it"
+  ],
+  "author": "stasson <sebastien.tasson@gmail.com>",
+  "homepage": "https://github.com/stasson/markspec",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "markdown-it": "^8.4.2"
+  }
+}
