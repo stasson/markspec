@@ -1,19 +1,25 @@
 const MarkdownIt = require("markdown-it");
 const MarkspecPlugin = require("@markspec/markdown-it-markspec");
 
-module.exports = async function render(text) {
+module.exports = async function render(
+  text,
+  options = {
+    pretty: true,
+  },
+  logger
+) {
   md = new MarkdownIt().use(MarkspecPlugin);
   body = md.render(text);
 
-  return `
+  const html = `
   <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1.4.0/themes/prism-vs.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css/github-markdown.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prism-themes@1/themes/prism-vs.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markdown-it-texmath@0.8.0/css/texmath.min.css">
+        
         <style>
             .markdown-body {
                 box-sizing: border-box;
@@ -31,8 +37,42 @@ module.exports = async function render(text) {
         </style>
     </head>
     <body class="markdown-body">
-      ${body}
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>mermaid.initialize({startOnLoad:true});</script>
+    ${body}
     </body>
   </html>
   `;
-}
+
+  if (options.pretty) {
+    // pretty
+    try {
+      const beautify = require("js-beautify").html;
+      pretty = beautify(html);
+      return pretty;
+    } catch (e) {
+      logger && logger.warn(`could not format html output`)
+    }
+  } else {
+    // minify
+    try {
+      const minify = require("html-minifier").minify;
+      const minified = minify(html, {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeTagWhitespace: true,
+        useShortDoctype: true,
+        minifyCSS: true,
+        minifyJS: true,
+        sortAttributes: true,
+        sortClassName: true,
+      });
+      return minified;
+    } catch (e) {
+      logger && logger.warn(`could not minify html output`)
+    }
+  }
+  return html;
+};

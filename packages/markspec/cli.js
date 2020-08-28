@@ -3,7 +3,6 @@
 const pkg = require("./package.json");
 const cli = require("@officr/cli")(pkg);
 const { fs, path, glob } = require("@officr/commons");
-const { lib } = require("markdown-it/lib/common/utils");
 const render = require('./lib/render')
 
 cli.logger.config({ console: true, exitCode: true });
@@ -15,6 +14,7 @@ cli
     default: ["**/node_modules"],
     type: [],
   })
+  .option("--pretty", "prettify html output")
   .action(async (patterns, options) => {
     // process args and apply config
     if (!patterns.length) patterns = ["**.md"];
@@ -31,7 +31,7 @@ cli
         cli.info(`processing ${filePath}...`);
 
         text = await fs.readFile(filePath, "utf8");
-        html = await render(text);
+        html = await render(text, options, cli.logger);
         await save(html, filePath, options);
       }
       cli.success();
