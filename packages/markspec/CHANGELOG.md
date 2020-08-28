@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/stasson/markspec/compare/markspec@2.2.0...markspec@2.3.0) (2020-08-28)
+
+
+### Features
+
+* **markspec:** add --pretty option ([9e13113](https://github.com/stasson/markspec/commit/9e13113c0ab719d1b8ffb2d70c1d8a0f4eff1ffc))
+
+
+
+
+
 # [2.2.0](https://github.com/stasson/markspec/compare/markspec@2.1.0...markspec@2.2.0) (2020-08-11)
 
 

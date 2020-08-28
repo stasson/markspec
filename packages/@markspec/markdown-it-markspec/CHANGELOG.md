@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/stasson/markspec/compare/@markspec/markdown-it-markspec@1.1.1...@markspec/markdown-it-markspec@1.2.0) (2020-08-28)
+
+
+### Features
+
+* **markdown-it-markspec:** add sections and link processing ([f89a7f4](https://github.com/stasson/markspec/commit/f89a7f4e25277c8f06d895d8a25fff51c2ec583b))
+
+
+
+
+
 ## [1.1.1](https://github.com/stasson/markspec/compare/@markspec/markdown-it-markspec@1.1.0...@markspec/markdown-it-markspec@1.1.1) (2020-08-11)
 
 **Note:** Version bump only for package @markspec/markdown-it-markspec
