@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-katex@1.1.2...@markspec/vuepress-plugin-katex@1.1.3) (2021-01-21)
+
+
+### Bug Fixes
+
+* **vuepress-plugin-katex:** css is missing from distribution ([87cfcd3](https://github.com/stasson/markspec/commit/87cfcd3c3d6835bede7f63b436433fd02a421ba0))
+
+
+
+
+
 ## [1.1.2](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-katex@1.1.1...@markspec/vuepress-plugin-katex@1.1.2) (2020-08-11)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-katex

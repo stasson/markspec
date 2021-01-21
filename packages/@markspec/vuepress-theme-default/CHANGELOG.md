@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.4](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.3.3...@markspec/vuepress-theme-default@1.3.4) (2021-01-21)
+
+**Note:** Version bump only for package @markspec/vuepress-theme-default
+
+
+
+
+
 ## [1.3.3](https://github.com/stasson/markspec/compare/@markspec/vuepress-theme-default@1.3.2...@markspec/vuepress-theme-default@1.3.3) (2020-08-11)
 
 **Note:** Version bump only for package @markspec/vuepress-theme-default

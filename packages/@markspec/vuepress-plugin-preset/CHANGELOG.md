@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.10](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-preset@1.1.9...@markspec/vuepress-plugin-preset@1.1.10) (2021-01-21)
+
+**Note:** Version bump only for package @markspec/vuepress-plugin-preset
+
+
+
+
+
 ## [1.1.9](https://github.com/stasson/markspec/compare/@markspec/vuepress-plugin-preset@1.1.8...@markspec/vuepress-plugin-preset@1.1.9) (2020-08-11)
 
 **Note:** Version bump only for package @markspec/vuepress-plugin-preset
