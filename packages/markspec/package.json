@@ -1,6 +1,6 @@
 {
   "name": "markspec",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "technical specification from markdown",
   "keywords": [
     "spec",
@@ -21,7 +21,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@markspec/markdown-it-markspec": "^1.2.0",
+    "@markspec/markdown-it-markspec": "^1.2.1",
     "@officr/cli": "^1.3.4",
     "@officr/commons": "^1.4.0",
     "@officr/logger": "^1.4.1",
