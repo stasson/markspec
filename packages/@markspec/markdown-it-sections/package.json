@@ -17,6 +17,6 @@
     "test": "jest"
   },
   "devDependencies": {
-    "markdown-it": "^8.4.2"
+    "markdown-it": "^12.3.2"
   }
 }
