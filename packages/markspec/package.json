@@ -27,6 +27,6 @@
     "@officr/logger": "^1.4.1",
     "html-minifier": "^4.0.0",
     "js-beautify": "^1.13.0",
-    "markdown-it": "^11.0.0"
+    "markdown-it": "^12.3.2"
   }
 }
